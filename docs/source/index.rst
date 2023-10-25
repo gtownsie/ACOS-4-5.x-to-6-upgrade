@@ -148,13 +148,13 @@ Upgrade Process
 +-------------+--------------+---------+------------+
 |New System   | Acitve       |         | Inactive   |
 +-------------+--------------+---------+------------+
-|1st Upgrade  | Inactive     |   -->   | Active     |
+|1st Upgrade  | Active       |   -->   | Inactive   |
 +-------------+--------------+---------+------------+
-|2nd Upgrade  | Active       |   -->   | Inactive   |
-+-------------+--------------+---------+------------+
-|Next Upgrade | Inactive     |   -->   | Active     |
+|2nd Upgrade  | Inactive     |   <--   | Active     |
 +-------------+--------------+---------+------------+
 |Next Upgrade | Active       |   -->   | Inactive   |
++-------------+--------------+---------+------------+
+|Next Upgrade | Inactive     |   -->   | Active     |
 +-------------+--------------+---------+------------+
 
 Download Software Image 
