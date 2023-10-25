@@ -63,15 +63,23 @@ This section outlines essential information that you should know before proceedi
 
 Table 1 : Prerequisite Tasks 
 
-+-----------------------------------------------------------------------------------+----------------------------+
-| Tasks                                                                             | Refer                      |
-+-----------------------------------------------------------------------------------+----------------------------+
-| Check the platform compatibility versus the supported release version             | Hardware Platforms Support |
-| Check the SKUs or product licenses availability.                                  | Hardware Product Licenses  |
-| Check the storage and memory requirement.                                         | System Requirement         |
-| Carefully review the new features, known issues, and changes to default behavior. | Documentation Site         |
-| Understand how ACOC selects the boot order.                                       | Review Boot Order          |
-+-----------------------------------------------------------------------------------+----------------------------+
++------------------------------------------------------------------------------------+-----------------------------+
+| Tasks                                                                              | Refer                       |
++------------------------------------------------------------------------------------+-----------------------------+
+| Check the platform compatibility versus the supported release version              | Hardware Platforms Support  |
++------------------------------------------------------------------------------------+-----------------------------+
+|Check the SKUs or product licenses availability.                                    | Hardware Product Licenses   |
++------------------------------------------------------------------------------------+-----------------------------+
+| Check the storage and memory requirement.                                          | System Requirement          |
++------------------------------------------------------------------------------------+-----------------------------+
+| Carefully review the new features, known issues, and changes to default behavior.  | Documentation Site          |
++------------------------------------------------------------------------------------+-----------------------------+
+| Understand what the ACOS partitions and how to take a backup.                      | System Partitions           |
++------------------------------------------------------------------------------------+-----------------------------+
+| Check the instructions for taking a system backup.                                 | Perform a Backup            |
++------------------------------------------------------------------------------------+-----------------------------+
+| Download the ACOS software image.                                                  | Download Software Image     |
++------------------------------------------------------------------------------------+-----------------------------+
 
 
 Tasks
