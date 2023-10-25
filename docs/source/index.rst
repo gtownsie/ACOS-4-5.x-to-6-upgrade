@@ -1,7 +1,8 @@
-# Upgrading to ACOS 6.x.x 
 
-## Overview 
-
+Upgrading to ACOS 6.x.x 
+===
+Overview 
+---
 The Thunder device is provided with preinstalled ACOS software along with an ADC license. When you power ON the device, it boots up with the preinstalled software. To access the latest new features and software fixes as they become available, you must upgrade the ACOS software. 
 
 If you are a new ACOS user, check the following documentation on the A10 Documentation Site:  
@@ -12,8 +13,8 @@ If you are a new ACOS user, check the following documentation on the A10 Documen
 - For instructions on acquiring a product license, see Global Licensing Manager.  
 - For initial configuration instructions and quick processes handbook, see Quick Start Guide. 
 
-## Purpose 
-
+Purpose 
+---
 This guide provides detailed instructions for upgrading from ACOS 4.x or 5.x to the latest version of 6.x. It includes information on pre-upgrade preparations, the upgrade procedure, post-upgrade tasks, troubleshooting tips, and additional resources. 
 
 The following topics are covered:  
@@ -35,7 +36,9 @@ Consider the following recommendations before upgrading the ACOS device:
 
 - Regardless of whether you have an ADC, CGN, or TPS, a single software image is used to upgrade your ACOS device. However, ensure that the correct product license is obtained and activated.  
 
-> NOTE:	For TPS upgrade instructions, see TPS Upgrade Guide. 
+.. warning:: 
+ For TPS upgrade instructions, see TPS Upgrade Guide.
+ 
 
 - During the reboot, the system performs a full reset and will be offline. The actual duration may vary depending on the system parameters.  
 
