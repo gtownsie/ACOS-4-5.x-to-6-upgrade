@@ -64,12 +64,16 @@ This section outlines essential information that you should know before proceedi
 Table 1 : Prerequisite Tasks 
 
 .. list-table:: Prerequisite Tasks
-  :widths: 75,25
-  :header-rows: 1
-  * - Tasks
-    - Refer
-  * - Check the platform compatibility versus the supported release version.
-    - Hardware Platforms Support
+  :widths: auto
+  =====    ====
+  Tasks    Refer
+  =====    ====
+  Check the platform compatibility versus the supported release version.   Hardware Platforms Support
+  =====    ====
+  
+
+
+
   * - Check the SKUs or product licenses availability.
     - Hardware Product Licenses
   * - Check the storage and memory requirement.
