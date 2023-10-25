@@ -299,7 +299,7 @@ CLI Configuration
 
 4. Press yes to reboot and bring up the upgraded ACOS software.  
   
-.. note:: Allow up to five minutes for the reboot to complete. (The typical reboot time is 2-3 minutes.) 
+  .. note:: Allow up to five minutes for the reboot to complete. (The typical reboot time is 2-3 minutes.) 
 
 6. Import the required license and reboot again.  
   The upgrade process is completed successfully.  
