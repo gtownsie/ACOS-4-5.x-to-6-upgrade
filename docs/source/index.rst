@@ -61,52 +61,20 @@ Prerequisites
 This section outlines essential information that you should know before proceeding with the upgrade process.  
 
 
-+--+--+
-|Tasks|Refer|
-+--+--+
-|Check the platform compatibility versus the supported release version | Hardware Platforms Support |
-+--+--+
-
-
-
-+-------------------+----------+---------------------------+--------+
-| Column 1          | Column 2 | Column 3 & 4 span (Row 1) |        |
-+-------------------+----------+---------------------------+--------+
-| Column 1 & 2 span | Column 3 | - Column 4                |        |
-+-------------------+----------+---------------------------+--------+
-| 1                 | 2        | 3                         | - span |
-+-------------------+----------+---------------------------+--------+
-
-
-.. list-table:: Title
-   :widths: 25 25 50
-   :header-rows: 1
-
-   * - Tasks
-     - Refer
-   * - Check the platform compatibility versus the supported release version.
-     - Hardware Platforms Support
-   * - Check the SKUs or product licenses availability.
-     - Hardware Product Licenses
-
-      
-
 Table 1 : Prerequisite Tasks 
-.. list-table:: TEST Table
-  :header-rows: 1
 
-  * - Test 1
-    - Test 2
-  * - 2test1
-    - 2test2 
++----------------------------------------------------------------------+-----------------------------+
+| Tasks                                                                 | Refer                      |
++-----------------------------------------------------------------------+----------------------------+
+| Check the platform compatibility versus the supported release version | Hardware Platforms Support |
++-----------------------------------------------------------------------+----------------------------+
+| Check the SKUs or product licenses availability.                      | Hardware Product Licenses  |
++-----------------------------------------------------------------------+----------------------------+
 
 
 
-.. list-table:: Prerequisite Tasks
-  :widths: auto
-  :header-rows: 1
 
-    * - Tasks
+Tasks
       - Refer
     * - Check the platform compatibility versus the supported release version.
       - Hardware Platforms Support
