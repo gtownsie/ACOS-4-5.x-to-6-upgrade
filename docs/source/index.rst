@@ -74,28 +74,8 @@ Table 1 : Prerequisite Tasks
 +-----------------------------------------------------------------------------------+----------------------------+
 | Carefully review the new features, known issues, and changes to default behavior. | Documentation Site         |
 +-----------------------------------------------------------------------------------+----------------------------+
-<<<<<<< HEAD
-| Understand how ACOS selects the boot order.                                       | Review Boot Order          |
-+-----------------------------------------------------------------------------------+----------------------------+
-| Understand what the ACOS partitions and how to take a backup.                     | System Partitions          |
-+-----------------------------------------------------------------------------------+----------------------------+
-| Check the instructions for taking a system backup.                                | Perform a Backup           |
-+-----------------------------------------------------------------------------------+----------------------------+
-| Download the ACOS software image.                                                 | Download Software Image    |
-+-----------------------------------------------------------------------------------+----------------------------+
-
-
-
-===== =====
-Tasks Refer
------ -----
-Testfjdsklajf fjdsklajkl;fjdsklajkl
-
-
-=======
 | Understand how ACOC selects the boot order.                                       | Review Boot Order          |
 +-----------------------------------------------------------------------------------+----------------------------+
->>>>>>> 40bb4ba7ce887fde9c6795f8c9475ac525e7f16e
 
 Tasks
       - Refer
