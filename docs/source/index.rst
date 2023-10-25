@@ -60,15 +60,22 @@ Prerequisites
 
 This section outlines essential information that you should know before proceeding with the upgrade process.  
 
-+------------+------------+------------+--------------+
-|  Header 1  |  Header 2  |  Header 3  |  Header 4    |
-+============+============+============+==============+
-|  Column 1  |  Column 2  | Column 3 & 4 span (Row 1) |
-+------------+------------+------------+--------------+
-|    Column 1 & 2 span    |  Column 3  | - Column 4   |
-+------------+------------+------------+ - Row 2 & 3  |
-|      1     |      2     |      3     | - span       |
-+------------+------------+------------+--------------+
+
++--+--+
+|Tasks|Refer|
++--+--+
+|Check the platform compatibility versus the supported release version | Hardware Platforms Support |
++--+--+
+
+
+
++-------------------+----------+---------------------------+--------+
+| Column 1          | Column 2 | Column 3 & 4 span (Row 1) |        |
++-------------------+----------+---------------------------+--------+
+| Column 1 & 2 span | Column 3 | - Column 4                |        |
++-------------------+----------+---------------------------+--------+
+| 1                 | 2        | 3                         | - span |
++-------------------+----------+---------------------------+--------+
 
 
 .. list-table:: Title
