@@ -63,16 +63,19 @@ This section outlines essential information that you should know before proceedi
 
 Table 1 : Prerequisite Tasks 
 
-+----------------------------------------------------------------------+-----------------------------+
-| Tasks                                                                 | Refer                      |
-+-----------------------------------------------------------------------+----------------------------+
-| Check the platform compatibility versus the supported release version | Hardware Platforms Support |
-+-----------------------------------------------------------------------+----------------------------+
-| Check the SKUs or product licenses availability.                      | Hardware Product Licenses  |
-+-----------------------------------------------------------------------+----------------------------+
-
-
-
++-----------------------------------------------------------------------------------+----------------------------+
+| Tasks                                                                             | Refer                      |
++-----------------------------------------------------------------------------------+----------------------------+
+| Check the platform compatibility versus the supported release version             | Hardware Platforms Support |
++-----------------------------------------------------------------------------------+----------------------------+
+| Check the SKUs or product licenses availability.                                  | Hardware Product Licenses  |
++-----------------------------------------------------------------------------------+----------------------------+
+| Check the storage and memory requirement.                                         | System Requirement         |
++-----------------------------------------------------------------------------------+----------------------------+
+| Carefully review the new features, known issues, and changes to default behavior. | Documentation Site         |
++-----------------------------------------------------------------------------------+----------------------------+
+| Understand how ACOC selects the boot order.                                       | Review Boot Order          |
++-----------------------------------------------------------------------------------+----------------------------+
 
 Tasks
       - Refer
@@ -84,7 +87,7 @@ Tasks
       - System Requirement
     * - Carefully review the new features, known issues, and changes to default behavior.
       - Documentation Site 
-    * - Understand how ACOS selects the boot order.
+    * - Understand how ACOC selects the boot order.
       - Review Boot Order
     * - Understand what the ACOS partitions and how to take a backup.
       - System Partitions
