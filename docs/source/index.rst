@@ -171,10 +171,13 @@ if the device does not have an FTA, no response to the `show hardware` command i
 
 Log in to A10 Networks Support using the GLM credential and download the ACOS upgrade package as specified below:  
 
-* For FTA enabled platforms, use the image with the file name: 
-  `ACOS_FTA_<version>.upg`
+* For FTA enabled platforms, use the image with the file name:
+  .. code-block:: rst
+    ACOS_FTA_<version>.upg
+
 * For Non-FTA enabled platforms (including vThunder), use the image with the file name: 
-  `ACOS_non_FTA_<version>.upg`
+  .. code-block:: rst
+    ACOS_non_FTA_<version>.upg
 
 ## Perform a Backup 
 
