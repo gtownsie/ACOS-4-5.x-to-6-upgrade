@@ -430,8 +430,8 @@ CLI Configuration
 ---
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
-..  literalinclude:: /update_config.txt
-    :language: txt
+
+..  literalinclude:: ./update_config.txt
 
 
   .. code-block:: text
