@@ -285,8 +285,8 @@ CLI Configuration
    
   ``ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg``
      
-.. note::  
-  Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
+  .. note::  
+    Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
 
   `* If the secondary hard disk is active upgrade the primary hard disk:`
     
