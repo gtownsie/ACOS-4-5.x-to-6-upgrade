@@ -66,16 +66,24 @@ Table 1 : Prerequisite Tasks
 .. list-table:: Prerequisite Tasks
   :widths: 75,25
   :header-rows: 1
-
-  * - Tasks, Refer
-  * Check the platform compatibility versus the supported release version. , Hardware Platforms Support
-  * Check the SKUs or product licenses availability. , Hardware Product Licenses
-  * Check the storage and memory requirement. , System Requirement
-  * Carefully review the new features, known issues, and changes to default behavior. , Documentation Site 
-  * Understand how ACOS selects the boot order. , Review Boot Order
-  * Understand what the ACOS partitions and how to take a backup. , System Partitions
-  * Check the instructions for taking a system backup. , Perform a Backup
-  * Download the ACOS software image. , Download Software Image 
+  * - Tasks
+    - Refer
+  * - Check the platform compatibility versus the supported release version.
+    - Hardware Platforms Support
+  * - Check the SKUs or product licenses availability.
+    - Hardware Product Licenses
+  * - Check the storage and memory requirement.
+    - System Requirement
+  * - Carefully review the new features, known issues, and changes to default behavior.
+    - Documentation Site 
+  * - Understand how ACOS selects the boot order.
+    - Review Boot Order
+  * - Understand what the ACOS partitions and how to take a backup.
+    - System Partitions
+  * - Check the instructions for taking a system backup.
+    - Perform a Backup
+  * - Download the ACOS software image.
+    - Download Software Image 
 
 .. note:: 	  
 * Schedule a maintenance window for the upgrade, considering the potential downtime required. Communicate this schedule to relevant stakeholders. 
