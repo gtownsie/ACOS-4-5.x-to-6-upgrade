@@ -82,38 +82,22 @@ Table 1 : Prerequisite Tasks
 +------------------------------------------------------------------------------------+-----------------------------+
 
 
-Tasks
-      - Refer
-    * - Check the platform compatibility versus the supported release version.
-      - Hardware Platforms Support
-    * - Check the SKUs or product licenses availability.
-      - Hardware Product Licenses
-    * - Check the storage and memory requirement.
-      - System Requirement
-    * - Carefully review the new features, known issues, and changes to default behavior.
-      - Documentation Site 
-    * - Understand how ACOC selects the boot order.
-      - Review Boot Order
-    * - Understand what the ACOS partitions and how to take a backup.
-      - System Partitions
-    * - Check the instructions for taking a system backup.
-      - Perform a Backup
-    * - Download the ACOS software image.
-      - Download Software Image 
-
 .. note:: 	  
 * Schedule a maintenance window for the upgrade, considering the potential downtime required. Communicate this schedule to relevant stakeholders. 
 * Inform all users about the scheduled downtime and ensure they save any unsaved work or log out of the system before the upgrade begins. 
 
-# Upgrade Requirements
-## System Requirement 
+Upgrade Requirements
+####
 
+System Requirement 
+****
 The system requirements for ACOS software include the following: 
 
 * For ACOS 6.x releases, the minimum disk space requirement is 8 GB.  
 * For vThunder and Thunder devices, the minimum memory requirement is 8 GB. 
 
-## System Partitions 
+System Partitions 
+****
 
 Each ACOS device contains one shared partition. By default, this is the only partition on the device and cannot be deleted. If there are no additional partitions on the device, all configuration changes occur in the shared partition. 
 
@@ -122,13 +106,18 @@ You can save the configuration of these partitions to either the default startup
 Depending on the configuration profile and the partition being saved to, the following summarizes the write memory command usage: 
 
  
-
-| Command                               | Descriptions |
-|-----------------------------------------------------|--------------|
-| ``write memory`` | Save the running configuration to the startup-config or the current profile in the current partition. |
-|``write memory all-partitions`` | Save the running configuration to their respective startup-config or their current profiles of all partitions.  
-|``write memory <profile-name>``|Save the running configuration to the new profile in the current partition. |
-|``write memory <profile-name> all-partitions`` | Save the running configuration to the new profile of all partitions. |
++--------------------------------------------------------------------+--------------------------------------------------------------+
+| Command                                                            | Descriptions                                                 |
++--------------------------------------------------------------------+--------------------------------------------------------------+
+| ``write memory``                                                   | Save the running configuration to the startup-config or the  |
+|                                                                    | current profile in the current partition.                    |
++--------------------------------------------------------------------+--------------------------------------------------------------+
+| Save the running configuration to their respective startup-config  | or their current profiles of all partitions.                 |
+|                                                                    | partition.                                                   |
++--------------------------------------------------------------------+--------------------------------------------------------------+
+| Save the running configuration to the new profile in the current   |                                                              |
+|                                                                    |                                                              |
++--------------------------------------------------------------------+--------------------------------------------------------------+
 
 ## Review Boot Order 
 
