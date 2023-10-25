@@ -333,7 +333,7 @@ Post-Upgrade Tasks
 # Restore Backup from same Platform
 
 
-# Platform migration
+# New Platform migration
 
 You can use a saved backup to restore your current system, for example, when upgrading the devices in your network to the newer A10 Thunder Series devices.  
 
