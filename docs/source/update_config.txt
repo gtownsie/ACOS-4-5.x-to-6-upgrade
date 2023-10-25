@@ -1,0 +1,99 @@
+ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
+Password []?  
+
+A10 Product: 
+| Object         | Backup device                 | Current device 
+|----------------|-------------------------------|--------------------- 
+| Device         | TH1030                        | TH3030 
+|Image version   | 4.1.1-P1                      | 4.1.1-P2 
+
+System memory: 
+    Object               Backup device        Current device 
+------------------------------------------------------------------- 
+    Memory (MB)          8174                 16384 
+
+Checking memory: OK. 
+
+Ethernet Interfaces: 
+    Object               Backup device        Current device 
+------------------------------------------------------------------- 
+    Total                10                    12 
+    1 Gig                1-10                  1-12 
+
+Do you want to skip port map?(Answer no if you want port mapping manually.) 
+[yes/no]: no 
+
+Please specify the Current device to Backup device port mapping 
+1-10 : a valid port number in backup device. 
+0    : to skip a port 
+-1   : to restart port mapping. 
+
+Current Port:    Backup device port 
+Port 1 : 2 <-- port 2 on the backup device is re-numbered to 1 
+Port 2 : 1 <-- port 1 on the backup device is re-numbered to 2 
+Port 3  :            0 
+Port 4  :            0 
+Port 5  :            0 
+Port 6  :            0 
+Port 7  :            0 
+Port 8  :            0 
+Port 9  :            0 
+Port 10 :            0 
+
+The current startup-configuration will be replaced with the new configuration that was imported. 
+
+Do you wish to see the diff between the updated startup-config and the original backup configuration? 
+
+[yes/no]: yes 
+
+Modified configuration begin with "!#" 
+
+!Current configuration: 277 bytes 
+!Configuration last updated at 05:38:18 UTC Fri Mar 17 2017 
+!Configuration last saved at 05:38:19 UTC Fri Mar 17 2017 
+!64-bit Advanced Core OS (ACOS) version 4.1.1-P2, build 112 (Mar-13-2017,15:41) 
+! 
+interface management 
+  ip address 192.168.210.24 255.255.255.0 
+  ip default-gateway 192.168.210.1 
+
+!#interface management 
+!#  ip address 192.168.210.24 255.255.255.0 
+!#  ip default-gateway 192.168.210.1 
+!#  exit-module 
+! 
+interface ethernet 2 
+!#interface ethernet 1 <-- original port 1 is now port 2 
+  exit-module 
+! 
+interface ethernet 1 
+!#interface ethernet 2 <-- original port 2 is now port 1 
+  exit-module 
+! 
+!#interface ethernet 3 
+!#  exit-module 
+! 
+!#interface ethernet 4 
+!#  exit-module 
+! 
+!#interface ethernet 5 
+!#  exit-module 
+! 
+!#interface ethernet 6 
+!#  exit-module 
+! 
+!#interface ethernet 7 
+!#  exit-module 
+! 
+!#interface ethernet 8 
+!#  exit-module 
+! 
+! 
+end 
+
+Complete the restore process? 
+[yes/no]: yes 
+
+Please wait restore to complete: . 
+
+Restore successful. Please reboot to take effect. 

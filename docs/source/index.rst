@@ -280,14 +280,14 @@ CLI Configuration
 
   * If the primary hard disk is active upgrade the secondary hard disk: 
    
-  `ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg`
+  ``ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg``
      
 .. note::  
   Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
 
-  * If the secondary hard disk is active upgrade the primary hard disk:
+  `* If the secondary hard disk is active upgrade the primary hard disk:`
     
-  `ACOS-5-x(config)# upgrade hd pri scp://2.2.2.2/images/ACOS_<version>.upg`
+  ``ACOS-5-x(config)# upgrade hd pri scp://2.2.2.2/images/ACOS_<version>.upg``
 
 .. note::
   Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist   
@@ -428,6 +428,7 @@ CLI Configuration
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
 
+.. include:: update_config.txt
 
 .. code-block:: rst
 ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
@@ -534,6 +535,6 @@ GUI Configuration
 ****
 
 1. Log in to ACOS Web GUI using your credentials. 
-1. Navigate to System >> Maintenance >> Restore.  
+2. Navigate to System >> Maintenance >> Restore.  
 > ==Need to get screen shots
  
