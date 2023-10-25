@@ -67,15 +67,12 @@ Table 1 : Prerequisite Tasks
 | Tasks                                                                             | Refer                      |
 +-----------------------------------------------------------------------------------+----------------------------+
 | Check the platform compatibility versus the supported release version             | Hardware Platforms Support |
-+-----------------------------------------------------------------------------------+----------------------------+
 | Check the SKUs or product licenses availability.                                  | Hardware Product Licenses  |
-+-----------------------------------------------------------------------------------+----------------------------+
 | Check the storage and memory requirement.                                         | System Requirement         |
-+-----------------------------------------------------------------------------------+----------------------------+
 | Carefully review the new features, known issues, and changes to default behavior. | Documentation Site         |
-+-----------------------------------------------------------------------------------+----------------------------+
 | Understand how ACOC selects the boot order.                                       | Review Boot Order          |
 +-----------------------------------------------------------------------------------+----------------------------+
+
 
 Tasks
       - Refer
