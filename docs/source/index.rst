@@ -289,7 +289,8 @@ CLI Configuration
     
     `ACOS-5-x(config)# upgrade hd pri scp://2.2.2.2/images/ACOS_<version>.upg`
 
-  .. note::  Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist   
+  .. note::
+    Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist   
 
 2. You will be prompted to reboot your ACOS device
     
@@ -299,7 +300,8 @@ CLI Configuration
 
 4. Press yes to reboot and bring up the upgraded ACOS software.  
   
-  .. note:: Allow up to five minutes for the reboot to complete. (The typical reboot time is 2-3 minutes.) 
+  .. note:: 
+    Allow up to five minutes for the reboot to complete. (The typical reboot time is 2-3 minutes.) 
 
 6. Import the required license and reboot again.  
   The upgrade process is completed successfully.  
