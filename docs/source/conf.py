@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'ACOS-4-5.x-to-6-upgrade'
+copyright = '2023, A10 Networks'
+author = 'gtownsend'
 
 release = '0.1'
 version = '0.1.0'
