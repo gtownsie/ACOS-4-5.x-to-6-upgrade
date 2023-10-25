@@ -281,28 +281,26 @@ CLI Configuration
 1. Upgrade the ACOS device to the inactve partition.  
 
    * If the primary hard disk is active upgrade the secondary hard disk: 
-   ``
-   ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg
-   ``
    
-      > Note:  Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
+   `ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg`
+     
+ .. note::  Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
 
      * If the secondary hard disk is active upgrade the primary hard disk:
     
-    ``
-    ACOS-5-x(config)# upgrade hd pri scp://2.2.2.2/images/ACOS_<version>.upg
-    ``
-    > Note:  Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist   
+    `ACOS-5-x(config)# upgrade hd pri scp://2.2.2.2/images/ACOS_<version>.upg`
 
-1. You will be prompted to reboot your ACOS device
+  .. note::  Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist   
+
+2. You will be prompted to reboot your ACOS device
     
    ==Choose "NO"==
   
-1. You will be prompted to reboot your ACOS device. 
+3. You will be prompted to reboot your ACOS device. 
 
-1. Press yes to reboot and bring up the upgraded ACOS software.  
+4. Press yes to reboot and bring up the upgraded ACOS software.  
   
-> Allow up to five minutes for the reboot to complete. (The typical reboot time is 2-3 minutes.) 
+.. note:: Allow up to five minutes for the reboot to complete. (The typical reboot time is 2-3 minutes.) 
 
 6. Import the required license and reboot again.  
   The upgrade process is completed successfully.  
