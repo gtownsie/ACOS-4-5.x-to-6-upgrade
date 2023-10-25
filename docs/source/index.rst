@@ -83,9 +83,9 @@ Table 1 : Prerequisite Tasks
 +--------------------------------------------------------------------+-----------------------------+
 
 
-.. note:: 	  
-* Schedule a maintenance window for the upgrade, considering the potential downtime required. Communicate this schedule to relevant stakeholders. 
-* Inform all users about the scheduled downtime and ensure they save any unsaved work or log out of the system before the upgrade begins. 
+.. note::
+  * Schedule a maintenance window for the upgrade, considering the potential downtime required. Communicate this schedule to relevant stakeholders. 
+  * Inform all users about the scheduled downtime and ensure they save any unsaved work or log out of the system before the upgrade begins. 
 
 Upgrade Requirements
 ####
@@ -127,7 +127,7 @@ Depending on the configuration profile and the partition being saved to, the fol
 Review Boot Order 
 ****
 
-This section describes general guidelines on how ACOS selects the boot image. 
+This section describes general guidelines on how ACOS selects the boot image. 
 
 Each ACOS device contains multiple locations where software images can be placed. The _Upgrade Process_ table provides an overview of the general upgrade process. 
 
@@ -180,12 +180,14 @@ Log in to A10 Networks Support using the GLM credential and download the ACOS up
 
 Perform a Backup 
 ****
+
 It's essential to perform a complete backup of your data, including configuration settings, databases, and any customizations. This backup will prove invaluable in case of unexpected issues during the upgrade and you want to restore it. For information about restoring a backup, see Restore from a Backup.  
 
 This section provides examples of how to back up your system. 
 
 CLI Configuration Backup 
 ---
+
 It is recommended to backup the system and the log files prior to upgrading the software.  
 * The following example creates a backup of the system (startup-config file, aFleX scripts, and SSL certificates and keys) on a remote server using SCP:
 
@@ -197,6 +199,7 @@ It is recommended to backup the system and the log files prior to upgrading the 
 
 GUI Configuration Backup
 ---
+
 1. Log in to ACOS Web GUI using your credentials. 
 1. Navigate to System >> Maintenance >> Backup.  
    >  == Add screenshot? 
@@ -385,7 +388,7 @@ If you are restoring between devices with different 40 GB port splitting configu
 
  
 
-Table 5 :  Restore Behavior for Port Splitting Combinations  
+Table 5 : Restore Behavior for Port Splitting Combinations  
 
 +---------------+-----------------+--------------------------------------------------------+
 |Backup Device  |Current Device   |Behavior During the Restore Operation                   |
@@ -428,7 +431,7 @@ CLI Configuration
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
 
-.. include:: /update_config.txt
+.. include:: ./update_config.txt
 
 .. code-block:: rst
 ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
