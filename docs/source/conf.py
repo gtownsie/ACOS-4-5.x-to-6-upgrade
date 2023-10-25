@@ -4,7 +4,7 @@
 
 project = 'ACOS-4-5.x-to-6-upgrade'
 copyright = '2023, A10 Networks'
-author = 'gtownsend'
+author = 'Glen Townsend'
 
 release = '0.1'
 version = '0.1.0'
