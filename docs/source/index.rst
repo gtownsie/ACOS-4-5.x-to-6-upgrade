@@ -396,9 +396,9 @@ Table 5 :  Restore Behavior for Port Splitting Combinations
 |or enabled.    | or enabled.     |                                                        |
 +---------------+-----------------+--------------------------------------------------------+
 |Port splitting | Port splitting  | Ask the user if they want to perform port mapping.     |
-|enabled       | disabled         | If yes, enable port splitting, reboot the device, and  |
-|              |                  | then perform the restore operation again, where        |
-|              |                  | port mapping will be enabled.                          |
+|enabled        | disabled        | If yes, enable port splitting, reboot the device, and  |
+|               |                 | then perform the restore operation again, where        |
+|               |                 | port mapping will be enabled.                          |
 +---------------+-----------------+--------------------------------------------------------+
 |Port splitting | Port splitting  | Exit the restore operation. The user will have to      |
 |disabled       | enabled         | perform a system-reset or disable port splitting,      |
