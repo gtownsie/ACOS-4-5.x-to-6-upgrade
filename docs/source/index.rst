@@ -455,13 +455,13 @@ See the highlighted lines in the following example output along with the corresp
 
     ``Do you want to skip port map?(Answer no if you want port mapping manually.) 
     [yes/no]: no``
-
-    ``Please specify the Current device to Backup device port mapping 
+    ``
+    Please specify the Current device to Backup device port mapping 
     1-10 : a valid port number in backup device. 
     0    : to skip a port 
-    -1   : to restart port mapping.`` 
+    -1   : to restart port mapping. 
 
-    ``Current Port:    Backup device port 
+    Current Port:    Backup device port 
     Port 1 : 2 <-- port 2 on the backup device is re-numbered to 1 
     Port 2 : 1 <-- port 1 on the backup device is re-numbered to 2 
     Port 3  :            0 
