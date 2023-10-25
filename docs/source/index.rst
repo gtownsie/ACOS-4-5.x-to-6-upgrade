@@ -428,7 +428,7 @@ CLI Configuration
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
 
-.. include:: .\update_config.txt
+.. include:: /update_config.txt
 
 .. code-block:: rst
 ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
