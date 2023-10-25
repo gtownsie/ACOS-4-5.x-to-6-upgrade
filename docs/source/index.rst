@@ -173,12 +173,10 @@ if the device does not have an FTA, no response to the `show hardware` command i
 Log in to A10 Networks Support using the GLM credential and download the ACOS upgrade package as specified below:  
 
 * For FTA enabled platforms, use the image with the file name:
-  .. code-block:: rst
-    ACOS_FTA_<version>.upg
+    `ACOS_FTA_<version>.upg`
 
 * For Non-FTA enabled platforms (including vThunder), use the image with the file name: 
-  .. code-block:: rst
-    ACOS_non_FTA_<version>.upg
+    `ACOS_non_FTA_<version>.upg`
 
 Perform a Backup 
 ****
@@ -285,6 +283,7 @@ CLI Configuration
    `ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg`
      
  .. note::  Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
+
 
      * If the secondary hard disk is active upgrade the primary hard disk:
     
