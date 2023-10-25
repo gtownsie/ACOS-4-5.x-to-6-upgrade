@@ -455,6 +455,7 @@ See the highlighted lines in the following example output along with the corresp
 
     ``Do you want to skip port map?(Answer no if you want port mapping manually.) 
     [yes/no]: no``
+    
     ``
     Please specify the Current device to Backup device port mapping 
     1-10 : a valid port number in backup device. 
@@ -471,7 +472,8 @@ See the highlighted lines in the following example output along with the corresp
     Port 7  :            0 
     Port 8  :            0 
     Port 9  :            0 
-    Port 10 :            0`` 
+    Port 10 :            0
+    `` 
 
     ``The current startup-configuration will be replaced with the new configuration that was imported.`` 
 
