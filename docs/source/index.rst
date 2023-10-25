@@ -4,20 +4,20 @@
 
 
 Upgrading to ACOS 6.x.x
-######
+####
 
 Overview 
-******
+****
 
 The Thunder device is provided with preinstalled ACOS software along with an ADC license. When you power ON the device, it boots up with the preinstalled software. To access the latest new features and software fixes as they become available, you must upgrade the ACOS software. 
 
 If you are a new ACOS user, check the following documentation on the A10 Documentation Site:  
-* For instructions on installing new hardware, see Installation Guide for Thunder Physical Appliance. 
-* For instruction on installing vThunder, see Installation Guide for Thunder Virtual Appliance. 
-* For instructions on installing cThunder, see Installation Guide for Thunder Container. 
-* For instructions on installing ACOS on Bare Metal, see Installation Guide for Bare Metal. 
-* For instructions on acquiring a product license, see Global Licensing Manager.  
-* For initial configuration instructions and quick processes handbook, see Quick Start Guide. 
+  * For instructions on installing new hardware, see Installation Guide for Thunder Physical Appliance. 
+  * For instruction on installing vThunder, see Installation Guide for Thunder Virtual Appliance. 
+  * For instructions on installing cThunder, see Installation Guide for Thunder Container. 
+  * For instructions on installing ACOS on Bare Metal, see Installation Guide for Bare Metal. 
+  * For instructions on acquiring a product license, see Global Licensing Manager.  
+  * For initial configuration instructions and quick processes handbook, see Quick Start Guide. 
 
 Purpose 
 ---
@@ -181,10 +181,10 @@ ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/ho
 Before upgrading ACOS software, you must perform some basic checks. Keep the below information handy to ensure a seamless upgrade.  
 
 
-### Upgrade Preparation Checklist 
+Upgrade Preparation Checklist 
+---
 
-
-  [] Verify platform compatability:
+- [ ] Verify platform compatability:
   
    ``ACOS(config)# show hardware | inc Gateway``
   
