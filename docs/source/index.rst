@@ -430,10 +430,11 @@ CLI Configuration
 ---
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
+..  literalinclude:: /update_config.txt
+    :language: txt
 
 
-
-  :: code-block:: none
+  .. code-block:: text
     ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
     Password []?  
 
