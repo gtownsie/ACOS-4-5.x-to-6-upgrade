@@ -124,7 +124,7 @@ Depending on the configuration profile and the partition being saved to, the fol
 +------------------------------------------------+--------------------------------------------------------------+
 
 Review Boot Order 
-####
+****
 
 This section describes general guidelines on how ACOS selects the boot image. 
 
@@ -140,45 +140,42 @@ You need to change the boot order only when you plan to upload the new image int
 A10 Networks recommends installing the new image into the inactive disk image area, either primary or secondary, while retaining the old image in the other area. This helps to restore the system in case a downgrade is necessary or if an issue occurs while rebooting the new image.  
 
 Upgrade Process
-####
+****
 
-+-------------+-------------+---------+------------+
-|System       | Partition 1 | Upgrade | Partition 2|
-+-------------+-------------+---------+------------+
-|New System   | Acitve       |         | Inactive  |
-+-------------+-------------+---------+------------+
-|1st Upgrade  | Inactive     |   -->   | Active    |
-+-------------+-------------+---------+------------+
-|2nd Upgrade  | Active       |   -->   | Inactive  |
-+-------------+-------------+---------+------------+
-|Next Upgrade | Inactive     |   -->   | Active    |
-+-------------+-------------+---------+------------+
-|Next Upgrade | Active       |   -->   | Inactive  |
-+-------------+-------------+---------+------------+
++-------------+--------------+---------+------------+
+|System       | Partition 1  | Upgrade | Partition 2|
++-------------+--------------+---------+------------+
+|New System   | Acitve       |         | Inactive   |
++-------------+--------------+---------+------------+
+|1st Upgrade  | Inactive     |   -->   | Active     |
++-------------+--------------+---------+------------+
+|2nd Upgrade  | Active       |   -->   | Inactive   |
++-------------+--------------+---------+------------+
+|Next Upgrade | Inactive     |   -->   | Active     |
++-------------+--------------+---------+------------+
+|Next Upgrade | Active       |   -->   | Inactive   |
++-------------+--------------+---------+------------+
 
 Download Software Image 
-####
+****
 
 A10 Networks has two device types, FTA and non-FTA.  All vThunder devices will use the non-FTA version and depending on the hardware type will determin the correct image.  To determine if your device has an FTA, login to the device and run the following command:
-``
-ACOS# show hardware | inc FPGA
-``
+
+`ACOS# show hardware | inc FPGA`
+
 If a response is shown then the device had and FTA.
-``
-FPGA       : 4 instance(s) present
-``
-if the device does not have an FTA, no response to the ``show hardware`` command is displayed
+
+`FPGA       : 4 instance(s) present`
+
+if the device does not have an FTA, no response to the `show hardware` command is displayed
 
 Log in to A10 Networks Support using the GLM credential and download the ACOS upgrade package as specified below:  
 
 * For FTA enabled platforms, use the image with the file name: 
-``
-ACOS_FTA_<version>.upg
-``
+  `ACOS_FTA_<version>.upg`
 * For Non-FTA enabled platforms (including vThunder), use the image with the file name: 
-``
-ACOS_non_FTA_<version>.upg
-``
+  `ACOS_non_FTA_<version>.upg`
+
 ## Perform a Backup 
 
 It's essential to perform a complete backup of your data, including configuration settings, databases, and any customizations. This backup will prove invaluable in case of unexpected issues during the upgrade and you want to restore it. For information about restoring a backup, see Restore from a Backup.  
@@ -214,67 +211,61 @@ Before upgrading ACOS software, you must perform some basic checks. Keep the bel
 Upgrade Preparation Checklist 
 ---
 
-- [ ] Verify platform compatability:
-  
-   ``ACOS(config)# show hardware | inc Gateway``
+  * Verify platform compatability:
+    
+    `ACOS(config)# show hardware | inc Gateway`
   
     Validate the platform is supported on version 6.x
-     * vThunder:
-        
-        ``Thunder Series Unified Application Service Gateway vThunder``
+    * vThunder:
+       `Thunder Series Unified Application Service Gateway vThunder`
         
     * Hardware:
-       
-      ``Thunder Series Unified Application Service Gateway TH5840S``
+      `Thunder Series Unified Application Service Gateway TH5840S`
       
-  [] Check the current software version
+  * Check the current software version
   
-  ``ACOS>show version | inc ACOS``
+    `ACOS\>show version | inc ACOS`
   
-  Validate that the current version is 4.x or later.
+    Validate that the current version is 4.x or later.
   
-  ``64-bit Advanced Core OS (ACOS) version 5.2.1-p5, build 114 (Jul-14-2022,05:11)``
+    `64-bit Advanced Core OS (ACOS) version 5.2.1-p5, build 114 (Jul-14-2022,05:11)`
   
+  * Check the current system disk space and verify minimum disk requriements 
+    
+    `ACOS(config)#show disk
+       Total(MB)    Used(MB)       Free(MB)       Usage
+       ---------------------------------------------------
+       20480          10421          10058          50%
+       Hard Disk Primary Status : OK`
+          
+  * Check Memory: 
+    `ACOS(config)#show memory | inc Memory`
 
-  [] Check the current system disk space and verify minimum disk requriements 
-     ``ACOS(config)#show disk
-        ACOS(config)#show disk
-        Total(MB)    Used(MB)       Free(MB)       Usage
-        ---------------------------------------------------
-        20480          10421          10058          50%
-        Hard Disk Primary Status : OK``
-        
+    Verify minimum memory requriements, from first column:
   
-  [] Check Memory: 
-  
-  ``ACOS(config)#show memory | inc Memory``
+    `Memory:  8127392      4742619     3384773   58.30%`
 
+  * Check the system boot order to determine new destination:
+  
+    `ACOS(config)#show bootimage | inc *`
 
-  Verify minimum memory requriements, from first column:
-  
-  ``Memory:  8127392      4742619     3384773   58.30%``
+    This will display the current Default boot location
+    `Hard Disk primary         5.2.1-p5.114 (*)`
 
-  [] Check the system boot order to determine new destination:
+  * Save all primary, secondary, and partition configurations
+    `write memory all-partitions 
+    Building configuration...
+    Write configuration to default primary startup-config
+    Write configuration to profile "pri_default" on partition GSLB 
+    [OK]`
   
-  ``ACOS(config)#show bootimage | inc *``
+  * Backup the system configuration
+  
+    `ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz`
 
-  This will display the current Default boot location
-  
-  ``Hard Disk primary         5.2.1-p5.114 (*)``
-
-  [] Save all primary, secondary, and partition configurations
-  ``write memory all-partitions 
-  Building configuration...
-  Write configuration to default primary startup-config
-  Write configuration to profile "pri_default" on partition GSLB 
-  [OK]``
-  
-  [] Backup the system configuration
-  
-  ``ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz``
-  [] Backup system log files
-  
-  ``ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz``
+  * Backup system log files
+    
+    `ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz`
  
  .. note::   
     For detailed information on all the commands, see ***Command Line Interface Reference***.
