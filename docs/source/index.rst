@@ -32,7 +32,8 @@ The following topics are covered:
 * Post-Upgrade Tasks 
 * Rollback Upgrade 
 
-## General Guidelines 
+General Guidelines 
+****
 
 Consider the following recommendations before upgrading the ACOS device: 
 
@@ -47,30 +48,34 @@ Consider the following recommendations before upgrading the ACOS device:
  
 * During the reboot, the system performs a full reset and will be offline. The actual duration may vary depending on the system parameters.  
 
-## Unsupported Hardware and Features
+Unsupported Hardware and Features
+****
 
 * The 3rd Generation Hardware Platforms cannot be upgraded to ACOS 6.x version. For more information, see Hardware Platforms Support.  
 
 * The Web Application Firewall (WAF) is no longer supported starting from the ACOS 6.x release. Hence, all WAF configurations will be removed after the upgrade. For more information, see Web Application Firewall Changes. 
 
-# Prerequisites 
+Prerequisites 
+****
 
 This section outlines essential information that you should know before proceeding with the upgrade process.  
 
- 
 
 Table 1 : Prerequisite Tasks 
 
-| Tasks | Refer |
-|:--------|----------|
-Check the platform compatibility versus the supported release version. | Hardware Platforms Support 
-Check the SKUs or product licenses availability. | Hardware Product Licenses 
-Check the storage and memory requirement. | System Requirement 
-Carefully review the new features, known issues, and changes to default behavior. | Documentation Site 
-Understand how ACOS selects the boot order. | Review Boot Order 
-Understand what the ACOS partitions and how to take a backup. | System Partitions 
-Check the instructions for taking a system backup. | Perform a Backup 
-Download the ACOS software image. | Download Software Image 
+.. list-table:: Prerequisite Tasks
+  :widths: 75,25
+  :header-rows: 1
+
+  * - Tasks, Refer
+  * Check the platform compatibility versus the supported release version. , Hardware Platforms Support
+  * Check the SKUs or product licenses availability. , Hardware Product Licenses
+  * Check the storage and memory requirement. , System Requirement
+  * Carefully review the new features, known issues, and changes to default behavior. , Documentation Site 
+  * Understand how ACOS selects the boot order. , Review Boot Order
+  * Understand what the ACOS partitions and how to take a backup. , System Partitions
+  * Check the instructions for taking a system backup. , Perform a Backup
+  * Download the ACOS software image. , Download Software Image 
 
 .. note:: 	  
 * Schedule a maintenance window for the upgrade, considering the potential downtime required. Communicate this schedule to relevant stakeholders. 
