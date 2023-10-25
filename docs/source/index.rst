@@ -96,7 +96,7 @@ The system requirements for ACOS software include the following:
 * For ACOS 6.x releases, the minimum disk space requirement is 8 GB.  
 * For vThunder and Thunder devices, the minimum memory requirement is 8 GB. 
 
-System Partitions 
+System Partitions
 ****
 
 Each ACOS device contains one shared partition. By default, this is the only partition on the device and cannot be deleted. If there are no additional partitions on the device, all configuration changes occur in the shared partition. 
@@ -106,20 +106,25 @@ You can save the configuration of these partitions to either the default startup
 Depending on the configuration profile and the partition being saved to, the following summarizes the write memory command usage: 
 
  
-+--------------------------------------------------------------------+--------------------------------------------------------------+
-| Command                                                            | Descriptions                                                 |
-+--------------------------------------------------------------------+--------------------------------------------------------------+
-| ``write memory``                                                   | Save the running configuration to the startup-config or the  |
-|                                                                    | current profile in the current partition.                    |
-+--------------------------------------------------------------------+--------------------------------------------------------------+
-| Save the running configuration to their respective startup-config  | or their current profiles of all partitions.                 |
-|                                                                    | partition.                                                   |
-+--------------------------------------------------------------------+--------------------------------------------------------------+
-| Save the running configuration to the new profile in the current   |                                                              |
-|                                                                    |                                                              |
-+--------------------------------------------------------------------+--------------------------------------------------------------+
++------------------------------------------------+--------------------------------------------------------------+
+| Command                                        | Descriptions                                                 |
++------------------------------------------------+--------------------------------------------------------------+
+| `write memory`                                 | Save the running configuration to the startup-config or the  |
+|                                                | current profile in the current partition.                    |
++------------------------------------------------+--------------------------------------------------------------+
+| `write memoroy all-partitions`                 | Save the running configuration to their respective           |
+|                                                | startup-config or their current profiles of all partitions.  |
+|                                                | partition.                                                   |
++------------------------------------------------+--------------------------------------------------------------+
+| `write memory <profile name>`                  | Save the running configuration to the new profile            |
+|                                                | in the current partition                                     |
++------------------------------------------------+--------------------------------------------------------------+
+| `write memory <profile name> all-partitions`   | Save the running configuration to the new profile            |
+|                                                | of all partitions                                            |
++------------------------------------------------+--------------------------------------------------------------+
 
-## Review Boot Order 
+Review Boot Order 
+####
 
 This section describes general guidelines on how ACOS selects the boot image. 
 
@@ -134,18 +139,25 @@ You need to change the boot order only when you plan to upload the new image int
 .. note::
 A10 Networks recommends installing the new image into the inactive disk image area, either primary or secondary, while retaining the old image in the other area. This helps to restore the system in case a downgrade is necessary or if an issue occurs while rebooting the new image.  
 
-### Upgrade Process
+Upgrade Process
+####
 
-|System|Partition 1|Upgrade|Partition 2|
-|----|:----:|:------:|:----:|
-|New System|Acitve||Inactive
-|1st Upgrade|Inactive|-->|Active
-|2nd Upgrade|Active|-->|Inactive
-|Next Upgrade|Inactive|-->|Active
-|Next Upgrade|Active|-->|Inactive
++-------------+-------------+---------+------------+
+|System       | Partition 1 | Upgrade | Partition 2|
++-------------+-------------+---------+------------+
+|New System   | Acitve       |         | Inactive  |
++-------------+-------------+---------+------------+
+|1st Upgrade  | Inactive     |   -->   | Active    |
++-------------+-------------+---------+------------+
+|2nd Upgrade  | Active       |   -->   | Inactive  |
++-------------+-------------+---------+------------+
+|Next Upgrade | Inactive     |   -->   | Active    |
++-------------+-------------+---------+------------+
+|Next Upgrade | Active       |   -->   | Inactive  |
++-------------+-------------+---------+------------+
 
-
-## Download Software Image 
+Download Software Image 
+####
 
 A10 Networks has two device types, FTA and non-FTA.  All vThunder devices will use the non-FTA version and depending on the hardware type will determin the correct image.  To determine if your device has an FTA, login to the device and run the following command:
 ``
