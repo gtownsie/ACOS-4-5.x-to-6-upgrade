@@ -60,11 +60,25 @@ Prerequisites
 
 This section outlines essential information that you should know before proceeding with the upgrade process.  
 
+.. list-table:: Title
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Heading row 1, column 1
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Row 1, column 1
+     -
+     - Row 1, column 3
+   * - Row 2, column 1
+     - Row 2, column 2
+     - Row 2, column 3
+     - 
 
 Table 1 : Prerequisite Tasks 
 .. list-table:: TEST Table
   :header-rows: 1
-  
+
   * - Test 1
     - Test 2
   * - 2test1
