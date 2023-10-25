@@ -431,11 +431,7 @@ CLI Configuration
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
 
-..  literalinclude:: ./update_config.txt
-
-
-  .. code-block:: text
-    ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
+    ``ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
     Password []?  
 
     A10 Product: 
@@ -534,7 +530,8 @@ See the highlighted lines in the following example output along with the corresp
     Please wait restore to complete: . 
 
     Restore successful. Please reboot to take effect. 
-
+    ``
+    
 GUI Configuration 
 ****
 
