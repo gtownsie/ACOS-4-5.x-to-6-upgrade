@@ -278,17 +278,16 @@ CLI Configuration
 1. Complete Upgrade Preparation Checklist
 1. Upgrade the ACOS device to the inactve partition.  
 
-   * If the primary hard disk is active upgrade the secondary hard disk: 
+  * If the primary hard disk is active upgrade the secondary hard disk: 
    
-   `ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg`
+  `ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg`
      
 .. note::  
   Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
 
-
-     * If the secondary hard disk is active upgrade the primary hard disk:
+  * If the secondary hard disk is active upgrade the primary hard disk:
     
-    `ACOS-5-x(config)# upgrade hd pri scp://2.2.2.2/images/ACOS_<version>.upg`
+  `ACOS-5-x(config)# upgrade hd pri scp://2.2.2.2/images/ACOS_<version>.upg`
 
 .. note::
   Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist   
