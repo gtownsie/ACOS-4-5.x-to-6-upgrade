@@ -50,10 +50,9 @@ Consider the following recommendations before upgrading the ACOS device:
 
 Unsupported Hardware and Features
 ****
-
-* The 3rd Generation Hardware Platforms cannot be upgraded to ACOS 6.x version. For more information, see Hardware Platforms Support.  
-
-* The Web Application Firewall (WAF) is no longer supported starting from the ACOS 6.x release. Hence, all WAF configurations will be removed after the upgrade. For more information, see Web Application Firewall Changes. 
+.. warning:: 
+* The 3rd Generation Hardware Platforms cannot be upgraded to ACOS 6.x version. For more information, see Hardware Platforms Support.  
+* The Web Application Firewall (WAF) is no longer supported starting from the ACOS 6.x release. Hence, all WAF configurations will be removed after the upgrade. For more information, see Web Application Firewall Changes. 
 
 Prerequisites 
 ****
@@ -181,34 +180,31 @@ Log in to A10 Networks Support using the GLM credential and download the ACOS up
   .. code-block:: rst
     ACOS_non_FTA_<version>.upg
 
-## Perform a Backup 
-
+Perform a Backup 
+****
 It's essential to perform a complete backup of your data, including configuration settings, databases, and any customizations. This backup will prove invaluable in case of unexpected issues during the upgrade and you want to restore it. For information about restoring a backup, see Restore from a Backup.  
 
 This section provides examples of how to back up your system. 
 
-### CLI Configuration Backup 
-
+CLI Configuration Backup 
+---
 It is recommended to backup the system and the log files prior to upgrading the software.  
 * The following example creates a backup of the system (startup-config file, aFleX scripts, and SSL certificates and keys) on a remote server using SCP:
 
-``
-ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz
-``
+`ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz`
 
 * The following example creates a daily backup of the log entries in the syslog buffer. The connection to the remote server will be established using SCP on the management interface (use-mgmt-port).  
 
-``
-ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz
-``
+`ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz`
 
-### GUI Configuration Backup
-
+GUI Configuration Backup
+---
 1. Log in to ACOS Web GUI using your credentials. 
 1. Navigate to System >> Maintenance >> Backup.  
    >  == Add screenshot? 
 
-## Pre-Upgrade Tasks 
+Pre-Upgrade Tasks 
+****
 
 Before upgrading ACOS software, you must perform some basic checks. Keep the below information handy to ensure a seamless upgrade.  
 
@@ -279,8 +275,8 @@ Upgrade Preparation Checklist
 
 This section describes the upgrade instructions using CLI and GUI. The upgrade instruction provided in this section applies to FTA platforms, non-FTA platforms, and non-aVCS environments.  
 
-## CLI Configuration 
-
+CLI Configuration 
+****
 1. Complete Upgrade Preparation Checklist
 1. Upgrade the ACOS device to the inactve partition.  
 
@@ -311,15 +307,17 @@ This section describes the upgrade instructions using CLI and GUI. The upgrade i
 6. Import the required license and reboot again.  
   The upgrade process is completed successfully.  
 
-## GUI Configuration 
+GUI Configuration 
+****
 
 1. Log in to ACOS Web GUI using your credentials. 
-1. Navigate to System >> Maintenance >> Upgrade.  
-1. On the Upgrade page, click ? to open the Online Help. 
+2. Navigate to System >> Maintenance >> Upgrade.  
+3. On the Upgrade page, click ? to open the Online Help. 
 
 The Online Help provides complete details on upgrade and rollback instructions.  
 
-## Post-Upgrade Tasks 
+Post-Upgrade Tasks 
+****
 
 After performing upgrade, it is important to perform some basic post-upgrade checks.  
 
@@ -335,8 +333,8 @@ Conduct thorough functional testing to ensure that all core features and functio
 
  
 
-# Rollback Upgrade 
-
+Rollback Upgrade 
+####
 In case the upgrade encounters significant issues or if it fails, have a rollback plan ready to revert to the previous version. The rollback for ACOS device is similar to the upgrade process.  
 
  
@@ -358,28 +356,31 @@ Perform the post-upgrade tasks
 Post-Upgrade Tasks 
 
  
-# Restore Backup from same Platform
+Restore Backup from same Platform
+####
 
-
-# New Platform migration
+New Platform migration
+####
 
 You can use a saved backup to restore your current system, for example, when upgrading the devices in your network to the newer A10 Thunder Series devices.  
 
-## Key Considerations for System Restore 
-
-### System Memory 
-
+Key Considerations for System Restore 
+****
+System Memory 
+---
 If the current device has insufficient memory compared to the backup device (for example, 16 GB on the current device compared to 32 GB on the previous device), this can adversely affect system performance.  
 
-### FTA versus Non-FTA 
-
+FTA versus Non-FTA 
+---
 When restoring from an FTA device to a non-FTA device, some commands may become unavailable after the restore operation. These commands are lost and cannot be restored. 
 
-### L3V Partitions 
+L3V Partitions 
+---
 
 L3v partitions and their configurations are restored. However, if you are restoring to a device that supports a fewer number of partitions (for example, 32) than you had configured from the backup device (for example, 64) any partitions and corresponding configuration beyond 32 will be lost. 
 
-### Port Splitting 
+Port Splitting 
+---
 
 If you are restoring between devices with different 40 GB port splitting configurations, see Table 5. 
 
@@ -387,29 +388,27 @@ If you are restoring between devices with different 40 GB port splitting configu
 
 Table 5 :  Restore Behavior for Port Splitting Combinations  
 
-Backup Device|Current Device 
-|---|---|
-Behavior During the Restore Operation|Port splitting disabled or enabled. 
++---------------+-----------------+--------------------------------------------------------+
+|Backup Device  |Current Device   |Behavior During the Restore Operation                   |
++---------------+-----------------+--------------------------------------------------------+
+|Port splitting | Port splitting  |  Allow user to perform port mapping                    |
+|disabled       | disabled        | (See Port Mapping.)                                    |
+|or enabled.    | or enabled.     |                                                        |
++---------------+-----------------+--------------------------------------------------------+
+|Port splitting | Port splitting  | Ask the user if they want to perform port mapping.     |
+|enabled       | disabled         | If yes, enable port splitting, reboot the device, and  |
+|              |                  | then perform the restore operation again, where        |
+|              |                  | port mapping will be enabled.                          |
++---------------+-----------------+--------------------------------------------------------+
+|Port splitting | Port splitting  | Exit the restore operation. The user will have to      |
+|disabled       | enabled         | perform a system-reset or disable port splitting,      |
+|               |                 | reboot the system, and then perform the restore        |
+|               |                 | operation again.                                       |
++---------------+-----------------+--------------------------------------------------------+
 
-Port splitting disabled or enabled. 
 
-Allow user to perform port mapping (See Port Mapping.) 
-
-Port splitting enabled. 
-
-Port splitting disabled. 
-
-Ask the user if they want to perform port mapping. If yes, enable port splitting, reboot the device, and then perform the restore operation again, where port mapping will be enabled. 
-
-Port splitting disabled. 
-
-Port splitting enabled. 
-
-Exit the restore operation. The user will have to perform a system-reset or disable port splitting, reboot the system, and then perform the restore operation again. 
-
- 
-
-### Port Mapping 
+Port Mapping 
+---
 
 When restoring from a device that has a different number of ports, or even the same number of ports, you can map the port number from the previous configuration to a new port number (or same port number) in the new configuration.  
 
@@ -417,20 +416,21 @@ In cases where the original number of ports is greater than the number of ports 
 
 If you choose to skip port mapping (see the example below), then the original port numbers and configurations are preserved. If the original device had ports 1-10 configured, and the new device only has ports 1-8, and you skip port mapping, then ports 9 and 10 are lost. If you choose port mapping, you can decide which 8 out of the original 10 ports you want to preserve during the port mapping process. 
 
-### Restore Example 
-
+Restore Example 
+---
 This section provides an example of a restore operation: 
 
 * The backup is restored from version 4.1.1-P1 to 4.1.1-P2.  
 * The system memory on the original device is 8 GB, but is 16GB on the new device. 
 * The number of interfaces on the original device is 10, but the new device has 12. 
 
-### CLI Configuration 
+CLI Configuration 
+---
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
 
-  
-``
+
+.. code-block:: rst
 ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
 Password []?  
 
@@ -530,8 +530,9 @@ Complete the restore process?
 Please wait restore to complete: . 
 
 Restore successful. Please reboot to take effect. 
-``
-## GUI Configuration 
+
+GUI Configuration 
+****
 
 1. Log in to ACOS Web GUI using your credentials. 
 1. Navigate to System >> Maintenance >> Restore.  
