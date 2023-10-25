@@ -62,32 +62,38 @@ This section outlines essential information that you should know before proceedi
 
 
 Table 1 : Prerequisite Tasks 
+.. list-table:: TEST Table
+  :header-rows: 1
+  
+  * - Test 1
+    - Test 2
+  * - 2test1
+    - 2test2 
+
+
 
 .. list-table:: Prerequisite Tasks
   :widths: auto
-  =====    ====
-  Tasks    Refer
-  =====    ====
-  Check the platform compatibility versus the supported release version.   Hardware Platforms Support
-  =====    ====
-  
+  :header-rows: 1
 
-
-
-  * - Check the SKUs or product licenses availability.
-    - Hardware Product Licenses
-  * - Check the storage and memory requirement.
-    - System Requirement
-  * - Carefully review the new features, known issues, and changes to default behavior.
-    - Documentation Site 
-  * - Understand how ACOS selects the boot order.
-    - Review Boot Order
-  * - Understand what the ACOS partitions and how to take a backup.
-    - System Partitions
-  * - Check the instructions for taking a system backup.
-    - Perform a Backup
-  * - Download the ACOS software image.
-    - Download Software Image 
+    * - Tasks
+      - Refer
+    * - Check the platform compatibility versus the supported release version.
+      - Hardware Platforms Support
+    * - Check the SKUs or product licenses availability.
+      - Hardware Product Licenses
+    * - Check the storage and memory requirement.
+      - System Requirement
+    * - Carefully review the new features, known issues, and changes to default behavior.
+      - Documentation Site 
+    * - Understand how ACOS selects the boot order.
+      - Review Boot Order
+    * - Understand what the ACOS partitions and how to take a backup.
+      - System Partitions
+    * - Check the instructions for taking a system backup.
+      - Perform a Backup
+    * - Download the ACOS software image.
+      - Download Software Image 
 
 .. note:: 	  
 * Schedule a maintenance window for the upgrade, considering the potential downtime required. Communicate this schedule to relevant stakeholders. 
