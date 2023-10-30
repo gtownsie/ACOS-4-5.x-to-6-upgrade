@@ -430,22 +430,22 @@ CLI Configuration
 ---
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
+``
+    ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
+    Password []? 
 
-    ``ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
-    Password []? ``
-
-    ``A10 Product: 
+    A10 Product: 
     | Object         | Backup device                 | Current device 
     |----------------|-------------------------------|--------------------- 
     | Device         | TH1030                        | TH3030 
     |Image version   | 4.1.1-P1                      | 4.1.1-P2 ``
 
-    ``System memory: 
+    System memory: 
         Object               Backup device        Current device 
     ------------------------------------------------------------------- 
         Memory (MB)          8174                 16384 ``
 
-    ``Checking memory: OK. 
+    Checking memory: OK. 
 
     Ethernet Interfaces: 
         Object               Backup device        Current device 
@@ -453,10 +453,9 @@ See the highlighted lines in the following example output along with the corresp
         Total                10                    12 
         1 Gig                1-10                  1-12`` 
 
-    ``Do you want to skip port map?(Answer no if you want port mapping manually.) 
+    Do you want to skip port map?(Answer no if you want port mapping manually.) 
     [yes/no]: no``
     
-    ``
     Please specify the Current device to Backup device port mapping 
     1-10 : a valid port number in backup device. 
     0    : to skip a port 
@@ -473,9 +472,8 @@ See the highlighted lines in the following example output along with the corresp
     Port 8  :            0 
     Port 9  :            0 
     Port 10 :            0
-    `` 
-
-    ``The current startup-configuration will be replaced with the new configuration that was imported.`` 
+    
+    The current startup-configuration will be replaced with the new configuration that was imported.
 
     Do you wish to see the diff between the updated startup-config and the original backup configuration? 
 
@@ -532,7 +530,7 @@ See the highlighted lines in the following example output along with the corresp
     Please wait restore to complete: . 
 
     Restore successful. Please reboot to take effect. 
-    ``
+``
 
 GUI Configuration 
 ****
