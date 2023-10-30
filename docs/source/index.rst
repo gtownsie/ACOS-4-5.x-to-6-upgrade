@@ -431,7 +431,7 @@ CLI Configuration
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
 
-.. code-block:: console
+.. sourcecode:: shell
     ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
     Password []? 
 
