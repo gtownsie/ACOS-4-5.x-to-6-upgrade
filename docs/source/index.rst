@@ -165,21 +165,21 @@ Download Software Image
 
 A10 Networks has two device types, FTA and non-FTA.  All vThunder devices will use the non-FTA version and depending on the hardware type will determin the correct image.  To determine if your device has an FTA, login to the device and run the following command:
 
-`ACOS# show hardware | inc FPGA`
+``ACOS# show hardware | inc FPGA``
 
 If a response is shown then the device had and FTA.
 
-`FPGA       : 4 instance(s) present`
+``FPGA       : 4 instance(s) present``
 
-if the device does not have an FTA, no response to the `show hardware` command is displayed
+if the device does not have an FTA, no response to the ``show hardware`` command is displayed
 
 Log in to A10 Networks Support using the GLM credential and download the ACOS upgrade package as specified below:  
 
 * For FTA enabled platforms, use the image with the file name:
-    `ACOS_FTA_<version>.upg`
+    ``ACOS_FTA_<version>.upg``
 
 * For Non-FTA enabled platforms (including vThunder), use the image with the file name: 
-    `ACOS_non_FTA_<version>.upg`
+    ``ACOS_non_FTA_<version>.upg``
 
 Perform a Backup 
 *********
@@ -194,11 +194,11 @@ CLI Configuration Backup
 It is recommended to backup the system and the log files prior to upgrading the software.  
 * The following example creates a backup of the system (startup-config file, aFleX scripts, and SSL certificates and keys) on a remote server using SCP:
 
-`ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz`
+``ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz``
 
 * The following example creates a daily backup of the log entries in the syslog buffer. The connection to the remote server will be established using SCP on the management interface (use-mgmt-port).  
 
-`ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz`
+``ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz``
 
 GUI Configuration Backup
 ---
