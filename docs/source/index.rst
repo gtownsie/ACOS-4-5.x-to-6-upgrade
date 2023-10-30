@@ -113,13 +113,6 @@ The upgrade path Table lists the supported upgrade paths for ACOS releases:
 |5.2.x           |5.2.x to 6.x  |            |          |
 +----------------+--------------+------------+----------+
 
-
-+-----------------+-----------------+----------------+-------------+
-|Existing Version | First Hop       | Second Hop     | Third Hop   |
-+-----------------+-----------------+----------------+-------------+
-| 2.7.x           | 2.7.x to 4.1.x	|  4.1.x to 5.x  |  5.x to 6.x |
-+-----------------+-----------------+----------------+-------------+
-
 System Requirement 
 =========
 The system requirements for ACOS software include the following: 
@@ -357,15 +350,18 @@ Post-Upgrade Tasks
 After performing upgrade, it is important to perform some basic post-upgrade checks.  
 
 Table 3 : Post-Upgrade Checklist 
-
-Tasks|Command or Action
-|----|----|
-Verify that the upgrade was successfully|ACOS>`show version` 
-Verify the required license is imported successfully|ACOS(config)#`show license-info`
-Verify if the saved configuration from all the partitions are loaded successfully|ACOS(config)#`startup-config [all \| all-partitions \| partition \| profile]`
-Configure any new features or settings introduced in the latest release|Refer New Features and Enhancements guide from the documentation site.  
-Conduct thorough functional testing to ensure that all core features and functionalities work as expected in the latest version|NA 
-
++---------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
+|Tasks                                                                            |Command or Action                                                            |
++---------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
+|Verify that the upgrade was successfully                                         |ACOS>`show version`                                                          | 
++---------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
+|Verify the required license is imported successfully                             |ACOS(config)#`show license-info`                                             |
++---------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
+|Verify if the saved configuration from all the partitions are loaded successfully|ACOS(config)#`startup-config [all \| all-partitions \| partition \| profile]`|
++---------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
+|Conduct thorough functional testing to ensure that all core features and         |NA                                                                           |
+|functionalities work as expected in the latest version                           |                                                                             |
++---------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
  
 
 Rollback Upgrade 
