@@ -92,6 +92,23 @@ Table 1 : Prerequisite Tasks
 Upgrade Requirements
 **********
 
+Version Requirements
+=========
+
+This upgrade document is for a 5.2.x to 6.x, Refer to the upgrade documentation for the specific upgrade path.
+
+The following section helps you in identifying the upgrade paths to the latest versions of ACOS releases:
+
+The upgrade path Table lists the supported upgrade paths for ACOS releases:
++------------------+----------------+--------------+------------+
+| Existing Version |	   First Hop   |  Second Hop  |	Third Hop  |
++------------------+----------------+--------------+------------+
+| 2.7.x            | 2.7.x to 4.1.x	| 4.1.x to 5.x	| 5.x to 6.x |
+| 4.1.x	           | 4.1.x to 5.x   |	5.x to 6.x	  |            |
+| 5.1.x            |	5.1.x to 5.2.x | 5.2.x to 6.x |            |
+| 5.2.x	           | 5.2.x to 6.x   |		            |            |
++------------------+----------------+--------------+------------+
+
 System Requirement 
 =========
 The system requirements for ACOS software include the following: 
