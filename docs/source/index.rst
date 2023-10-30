@@ -238,23 +238,35 @@ Upgrade Preparation Checklist
 =========
 
   * Verify platform compatability:
-    
-      ``ACOS(config)# show hardware | inc Gateway``
+
+    .. code-block:: shell
+
+      ACOS(config)# show hardware | inc Gateway``
   
     Validate the platform is supported on version 6.x
     * vThunder:
-       ``Thunder Series Unified Application Service Gateway vThunder``
+
+    .. code-block:: shell
+
+       Thunder Series Unified Application Service Gateway vThunder
         
     * Hardware:
-      ``Thunder Series Unified Application Service Gateway TH5840S``
+
+    .. code-block:: shell
+
+      Thunder Series Unified Application Service Gateway TH5840S
       
   * Check the current software version
-  
-      ``ACOS\>show version | inc ACOS``
+
+    .. code-block:: shell
+
+      ACOS\>show version | inc ACOS
   
     Validate that the current version is 4.x or later.
-  
-      ``64-bit Advanced Core OS (ACOS) version 5.2.1-p5, build 114 (Jul-14-2022,05:11)``
+
+    .. code-block:: shell
+
+      64-bit Advanced Core OS (ACOS) version 5.2.1-p5, build 114 (Jul-14-2022,05:11)
   
   * Check the current system disk space and verify minimum disk requriements 
 
@@ -267,33 +279,46 @@ Upgrade Preparation Checklist
        Hard Disk Primary Status : OK
           
   * Check Memory: 
-      ``ACOS(config)#show memory | inc Memory``
+    .. code-block:: shell
+
+      ACOS(config)#show memory | inc Memory
 
       Verify minimum memory requriements, from first column:
-  
-      ``Memory:  8127392      4742619     3384773   58.30%``
+
+    .. code-block:: shell
+
+      Memory:  8127392      4742619     3384773   58.30%
 
   * Check the system boot order to determine new destination:
   
-    ``ACOS(config)#show bootimage | inc *``
+    .. code-block:: shell
+      ACOS(config)#show bootimage | inc *
 
     This will display the current Default boot location
-    ``Hard Disk primary         5.2.1-p5.114 (*)``
+
+    .. code-block:: shell
+
+      Hard Disk primary         5.2.1-p5.114 (*)
 
   * Save all primary, secondary, and partition configurations
-    ``write memory all-partitions 
-    Building configuration...
-    Write configuration to default primary startup-config
-    Write configuration to profile "pri_default" on partition GSLB 
-    [OK]``
+
+    .. code-block:: shell
+
+      write memory all-partitions 
+      Building configuration...
+      Write configuration to default primary startup-config
+      Write configuration to profile "pri_default" on partition GSLB 
+      [OK]
   
   * Backup the system configuration
-  
-    ``ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz``
+
+    .. code-block:: shell
+    ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz
 
   * Backup system log files
-    
-    ``ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz``
+
+    .. code-block:: shell
+      ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz
  
  .. note::   
     For detailed information on all the commands, see ***Command Line Interface Reference***.
