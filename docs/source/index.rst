@@ -187,21 +187,33 @@ Download Software Image
 
 A10 Networks has two device types, FTA and non-FTA.  All vThunder devices will use the non-FTA version and depending on the hardware type will determin the correct image.  To determine if your device has an FTA, login to the device and run the following command:
 
-    ``ACOS# show hardware | inc FPGA``
+  .. code-block:: shell
+
+     ACOS# show hardware | inc FPGA
 
 If a response is shown then the device had and FTA.
 
-    ``FPGA       : 4 instance(s) present``
+
+  .. code-block:: shell
+
+    FPGA       : 4 instance(s) present
 
 if the device does not have an FTA, no response to the ``show hardware`` command is displayed
 
 Log in to A10 Networks Support using the GLM credential and download the ACOS upgrade package as specified below:  
 
 * For FTA enabled platforms, use the image with the file name:
-    ``ACOS_FTA_<version>.upg``
+
+
+  .. code-block:: shell
+ 
+    ACOS_FTA_<version>.upg
 
 * For Non-FTA enabled platforms (including vThunder), use the image with the file name: 
-    ``ACOS_non_FTA_<version>.upg``
+
+  .. code-block:: shell
+
+    ACOS_non_FTA_<version>.upg
 
 Perform a Backup 
 =========
@@ -246,7 +258,7 @@ Upgrade Preparation Checklist
 
     .. code-block:: shell
 
-      ACOS(config)# show hardware | inc Gateway``
+      ACOS(config)# show hardware | inc Gateway
   
     Validate the platform is supported on version 6.x
     * vThunder:
@@ -312,15 +324,18 @@ Upgrade Preparation Checklist
   * Backup the system configuration
 
     .. code-block:: shell
-    ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz
+
+      ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz
 
   * Backup system log files
 
     .. code-block:: shell
+
       ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz
  
- .. note::   
-    For detailed information on all the commands, see ***Command Line Interface Reference***.
+   .. note::   
+
+     For detailed information on all the commands, see ***Command Line Interface Reference***.
 
 Upgrade Instructions
 *********
@@ -334,17 +349,21 @@ CLI Configuration
 1. Upgrade the ACOS device to the inactve partition.  
 
   * If the primary hard disk is active upgrade the secondary hard disk: 
-   
-  ``ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg``
+
+    .. code-block:: shell
+      ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg
      
   .. note::  
     Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
 
   * If the secondary hard disk is active upgrade the primary hard disk:
-    
-  ``ACOS-5-x(config)# upgrade hd pri scp://2.2.2.2/images/ACOS_<version>.upg``
 
-  .. note::
+   .. code-block:: shell
+
+     ACOS-5-x(config)# upgrade hd pri scp://2.2.2.2/images/ACOS_<version>.upg
+
+   .. note::
+
     Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist   
 
 2. You will be prompted to reboot your ACOS device
