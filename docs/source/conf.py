@@ -11,6 +11,9 @@ version = '0.1.0'
 
 # -- General configuration
 
+def setup(app):
+   app.add_css_file("custom.css")
+    
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
