@@ -101,9 +101,9 @@ The following section helps you in identifying the upgrade paths to the latest v
 
 The upgrade path Table lists the supported upgrade paths for ACOS releases:
 
-+------------------+-----------------+----------------+-------------+
-| Existing Version |	   First Hop    |   Second Hop   |	 Third Hop  |
-+------------------+-----------------+----------------+-------------+
++----------------+---------+----------+---------+
+|Existing Version|First Hop|Second Hop|Third Hop|
++----------------+---------+----------+---------+
 
 
 | 2.7.x            | 2.7.x to 4.1.x	 |  4.1.x to 5.x 	|  5.x to 6.x |
