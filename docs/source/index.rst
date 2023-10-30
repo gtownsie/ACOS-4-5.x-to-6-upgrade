@@ -35,7 +35,7 @@ The following topics are covered:
 * Rollback Upgrade 
 
 General Guidelines 
-****
+*********
 
 Consider the following recommendations before upgrading the ACOS device: 
 
@@ -51,13 +51,14 @@ Consider the following recommendations before upgrading the ACOS device:
 * During the reboot, the system performs a full reset and will be offline. The actual duration may vary depending on the system parameters.  
 
 Unsupported Hardware and Features
-****
+*********
+
 .. warning:: 
 * The 3rd Generation Hardware Platforms cannot be upgraded to ACOS 6.x version. For more information, see Hardware Platforms Support.  
 * The Web Application Firewall (WAF) is no longer supported starting from the ACOS 6.x release. Hence, all WAF configurations will be removed after the upgrade. For more information, see Web Application Firewall Changes. 
 
 Prerequisites 
-****
+*********
 
 This section outlines essential information that you should know before proceeding with the upgrade process.  
 
@@ -93,14 +94,14 @@ Upgrade Requirements
 ####
 
 System Requirement 
-****
+*********
 The system requirements for ACOS software include the following: 
 
 * For ACOS 6.x releases, the minimum disk space requirement is 8 GB.  
 * For vThunder and Thunder devices, the minimum memory requirement is 8 GB. 
 
 System Partitions
-****
+*********
 
 Each ACOS device contains one shared partition. By default, this is the only partition on the device and cannot be deleted. If there are no additional partitions on the device, all configuration changes occur in the shared partition. 
 
@@ -127,11 +128,11 @@ Depending on the configuration profile and the partition being saved to, the fol
 +------------------------------------------------+--------------------------------------------------------------+
 
 Review Boot Order 
-****
+*********
 
 This section describes general guidelines on how ACOS selects the boot image. 
 
-Each ACOS device contains multiple locations where software images can be placed. The _Upgrade Process_ table provides an overview of the general upgrade process. 
+Each ACOS device contains multiple locations where software images can be placed. The "Upgrade Process" table provides an overview of the general upgrade process. 
 
 * When you load a new image onto the ACOS device, you can select the image device (disk or CF) and the area (primary or secondary) on the device.  
 
@@ -143,7 +144,7 @@ You need to change the boot order only when you plan to upload the new image int
 A10 Networks recommends installing the new image into the inactive disk image area, either primary or secondary, while retaining the old image in the other area. This helps to restore the system in case a downgrade is necessary or if an issue occurs while rebooting the new image.  
 
 Upgrade Process
-****
+*********
 
 +-------------+--------------+---------+------------+
 |System       | Partition 1  | Upgrade | Partition 2|
@@ -160,7 +161,7 @@ Upgrade Process
 +-------------+--------------+---------+------------+
 
 Download Software Image 
-****
+*********
 
 A10 Networks has two device types, FTA and non-FTA.  All vThunder devices will use the non-FTA version and depending on the hardware type will determin the correct image.  To determine if your device has an FTA, login to the device and run the following command:
 
@@ -181,7 +182,7 @@ Log in to A10 Networks Support using the GLM credential and download the ACOS up
     `ACOS_non_FTA_<version>.upg`
 
 Perform a Backup 
-****
+*********
 
 It's essential to perform a complete backup of your data, including configuration settings, databases, and any customizations. This backup will prove invaluable in case of unexpected issues during the upgrade and you want to restore it. For information about restoring a backup, see Restore from a Backup.  
 
@@ -207,7 +208,7 @@ GUI Configuration Backup
    >  == Add screenshot? 
 
 Pre-Upgrade Tasks 
-****
+*********
 
 Before upgrading ACOS software, you must perform some basic checks. Keep the below information handy to ensure a seamless upgrade.  
 
@@ -279,7 +280,8 @@ Upgrade Preparation Checklist
 This section describes the upgrade instructions using CLI and GUI. The upgrade instruction provided in this section applies to FTA platforms, non-FTA platforms, and non-aVCS environments.  
 
 CLI Configuration 
-****
+*********
+
 1. Complete Upgrade Preparation Checklist
 1. Upgrade the ACOS device to the inactve partition.  
 
@@ -312,7 +314,7 @@ CLI Configuration
   The upgrade process is completed successfully.  
 
 GUI Configuration 
-****
+*********
 
 1. Log in to ACOS Web GUI using your credentials. 
 2. Navigate to System >> Maintenance >> Upgrade.  
@@ -321,7 +323,7 @@ GUI Configuration
 The Online Help provides complete details on upgrade and rollback instructions.  
 
 Post-Upgrade Tasks 
-****
+*********
 
 After performing upgrade, it is important to perform some basic post-upgrade checks.  
 
@@ -339,9 +341,8 @@ Conduct thorough functional testing to ensure that all core features and functio
 
 Rollback Upgrade 
 ####
-In case the upgrade encounters significant issues or if it fails, have a rollback plan ready to revert to the previous version. The rollback for ACOS device is similar to the upgrade process.  
 
- 
+In case the upgrade encounters significant issues or if it fails, have a rollback plan ready to revert to the previous version. The rollback for ACOS device is similar to the upgrade process.  
 
 **Table 4 : Rollback Tasks**
 
@@ -361,30 +362,32 @@ Post-Upgrade Tasks
 
  
 Restore Backup from same Platform
-####
+*********
 
 New Platform migration
-####
+=========
 
 You can use a saved backup to restore your current system, for example, when upgrading the devices in your network to the newer A10 Thunder Series devices.  
 
 Key Considerations for System Restore 
-****
+*********
+
 System Memory 
 ---
 If the current device has insufficient memory compared to the backup device (for example, 16 GB on the current device compared to 32 GB on the previous device), this can adversely affect system performance.  
 
 FTA versus Non-FTA 
----
+=========
+
 When restoring from an FTA device to a non-FTA device, some commands may become unavailable after the restore operation. These commands are lost and cannot be restored. 
 
 L3V Partitions 
----
+=========
 
 L3v partitions and their configurations are restored. However, if you are restoring to a device that supports a fewer number of partitions (for example, 32) than you had configured from the backup device (for example, 64) any partitions and corresponding configuration beyond 32 will be lost. 
 
 Port Splitting 
----
+=========
 
 If you are restoring between devices with different 40 GB port splitting configurations, see Table 5. 
 
@@ -412,7 +415,7 @@ Table 5 : Restore Behavior for Port Splitting Combinations
 
 
 Port Mapping 
----
+=========
 
 When restoring from a device that has a different number of ports, or even the same number of ports, you can map the port number from the previous configuration to a new port number (or same port number) in the new configuration.  
 
@@ -421,7 +424,8 @@ In cases where the original number of ports is greater than the number of ports 
 If you choose to skip port mapping (see the example below), then the original port numbers and configurations are preserved. If the original device had ports 1-10 configured, and the new device only has ports 1-8, and you skip port mapping, then ports 9 and 10 are lost. If you choose port mapping, you can decide which 8 out of the original 10 ports you want to preserve during the port mapping process. 
 
 Restore Example 
----
+=========
+
 This section provides an example of a restore operation: 
 
 * The backup is restored from version 4.1.1-P1 to 4.1.1-P2.  
@@ -429,11 +433,10 @@ This section provides an example of a restore operation:
 * The number of interfaces on the original device is 10, but the new device has 12. 
 
 CLI Configuration 
----
+=========
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
 
-abcabcabcabc
 
 .. code-block:: shell
 
@@ -534,7 +537,7 @@ abcabcabcabc
 
 
 GUI Configuration 
-****
+=========
 
 1. Log in to ACOS Web GUI using your credentials. 
 2. Navigate to System >> Maintenance >> Restore.  
