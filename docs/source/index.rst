@@ -275,7 +275,8 @@ Upgrade Preparation Checklist
  .. note::   
     For detailed information on all the commands, see ***Command Line Interface Reference***.
 
-# Upgrade Instructions 
+Upgrade Instructions
+*********
 
 This section describes the upgrade instructions using CLI and GUI. The upgrade instruction provided in this section applies to FTA platforms, non-FTA platforms, and non-aVCS environments.  
 
