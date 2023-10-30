@@ -257,6 +257,7 @@ Upgrade Preparation Checklist
       ``64-bit Advanced Core OS (ACOS) version 5.2.1-p5, build 114 (Jul-14-2022,05:11)``
   
   * Check the current system disk space and verify minimum disk requriements 
+
     .. code-block:: shell
 
        ACOS(config)#show disk
@@ -464,7 +465,6 @@ CLI Configuration
 =========
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
-
 
 .. code-block:: shell
 
