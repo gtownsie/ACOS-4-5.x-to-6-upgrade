@@ -434,6 +434,7 @@ See the highlighted lines in the following example output along with the corresp
 abcabcabcabc
 
 .. code-block:: shell
+
    ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
    Password []? 
 
