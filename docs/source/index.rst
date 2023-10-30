@@ -115,20 +115,8 @@ The upgrade path Table lists the supported upgrade paths for ACOS releases:
 +-----------------+-----------------+----------------+-------------+
 |Existing Version | First Hop       | Second Hop     | Third Hop   |
 +-----------------+-----------------+----------------+-------------+
-| 2.7.x           | 2.7.x to 4.1.x	 |  4.1.x to 5.x 	|  5.x to 6.x |
+| 2.7.x           | 2.7.x to 4.1.x	|  4.1.x to 5.x  |  5.x to 6.x |
 +-----------------+-----------------+----------------+-------------+
-
-|New System   | Acitve       |         | Inactive   |
-+-------------+--------------+---------+------------+
-|1st Upgrade  | Active       |   -->   | Inactive   |
-+-------------+--------------+---------+------------+
-|2nd Upgrade  | Inactive     |   <--   | Active     |
-+-------------+--------------+---------+------------+
-|Next Upgrade | Active       |   -->   | Inactive   |
-+-------------+--------------+---------+------------+
-|Next Upgrade | Inactive     |   -->   | Active     |
-+-------------+--------------+---------+------------+
-
 
 System Requirement 
 =========
