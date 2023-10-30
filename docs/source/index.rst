@@ -256,22 +256,22 @@ Upgrade Preparation Checklist
 
   * Verify platform compatability:
 
-    .. code-block:: shell
+  .. code-block:: shell
 
-      ACOS(config)# show hardware | inc Gateway
+    ACOS(config)# show hardware | inc Gateway
   
     Validate the platform is supported on version 6.x
     * vThunder:
 
-    .. code-block:: shell
+  .. code-block:: shell
 
-       Thunder Series Unified Application Service Gateway vThunder
+     Thunder Series Unified Application Service Gateway vThunder
         
     * Hardware:
 
-    .. code-block:: shell
+   .. code-block:: shell
 
-      Thunder Series Unified Application Service Gateway TH5840S
+     Thunder Series Unified Application Service Gateway TH5840S
       
   * Check the current software version
 
@@ -313,7 +313,7 @@ Upgrade Preparation Checklist
 
    * Save all primary, secondary, and partition configurations
 
-    .. code-block:: shell
+   .. code-block:: shell
 
       write memory all-partitions 
       Building configuration...
@@ -323,19 +323,19 @@ Upgrade Preparation Checklist
   
   * Backup the system configuration
 
-    .. code-block:: shell
+   .. code-block:: shell
 
       ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz
 
   * Backup system log files
 
-    .. code-block:: shell
+   .. code-block:: shell
 
       ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz
  
    .. note::   
 
-     For detailed information on all the commands, see ***Command Line Interface Reference***.
+      For detailed information on all the commands, see ***Command Line Interface Reference***.
 
 Upgrade Instructions
 *********
@@ -350,11 +350,11 @@ CLI Configuration
 
   * If the primary hard disk is active upgrade the secondary hard disk: 
 
-    .. code-block:: shell
+   .. code-block:: shell
       ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg
      
-  .. note::  
-    Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
+   .. note::  
+      Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
 
   * If the secondary hard disk is active upgrade the primary hard disk:
 
@@ -374,8 +374,8 @@ CLI Configuration
 
 4. Press yes to reboot and bring up the upgraded ACOS software.  
   
-  .. note:: 
-    Allow up to five minutes for the reboot to complete. (The typical reboot time is 2-3 minutes.) 
+   .. note:: 
+     Allow up to five minutes for the reboot to complete. (The typical reboot time is 2-3 minutes.) 
 
 6. Import the required license and reboot again.  
   The upgrade process is completed successfully.  
