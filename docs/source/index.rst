@@ -20,7 +20,7 @@ If you are a new ACOS user, check the following documentation on the A10 Documen
   * For initial configuration instructions and quick processes handbook, see Quick Start Guide. 
 
 Purpose 
----
+===
 This guide provides detailed instructions for upgrading from ACOS 4.x or 5.x to the latest version of 6.x. It includes information on pre-upgrade preparations, the upgrade procedure, post-upgrade tasks, troubleshooting tips, and additional resources. 
 
 The following topics are covered:  
@@ -186,7 +186,7 @@ It's essential to perform a complete backup of your data, including configuratio
 This section provides examples of how to back up your system. 
 
 CLI Configuration Backup 
----
+===
 
 It is recommended to backup the system and the log files prior to upgrading the software.  
 * The following example creates a backup of the system (startup-config file, aFleX scripts, and SSL certificates and keys) on a remote server using SCP:
