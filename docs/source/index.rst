@@ -431,9 +431,14 @@ CLI Configuration
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
 
-.. sourcecode:: shell
-    ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
-    Password []? 
+.. code-block::
+   ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
+   Password []? 
+
+
+
+
+
 
     A10 Product: 
     | Object         | Backup device                 | Current device 
