@@ -161,6 +161,7 @@ Each ACOS device contains multiple locations where software images can be placed
 You need to change the boot order only when you plan to upload the new image into an image area other than the first image area the ACOS device uses when it boots (primary disk). To change the boot order, use the bootimage command.  
 
 .. note::
+
   A10 Networks recommends installing the new image into the inactive disk image area, either primary or secondary, while retaining the old image in the other area. This helps to 
   restore the system in case a downgrade is necessary or if an issue occurs while rebooting the new image.  
 
@@ -215,11 +216,15 @@ CLI Configuration Backup
 It is recommended to backup the system and the log files prior to upgrading the software.  
 * The following example creates a backup of the system (startup-config file, aFleX scripts, and SSL certificates and keys) on a remote server using SCP:
 
-    ``ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz``
+  .. code-block:: shell
+
+    ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz
 
 * The following example creates a daily backup of the log entries in the syslog buffer. The connection to the remote server will be established using SCP on the management interface (use-mgmt-port).  
 
-    ``ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz``
+   .. code-block:: shell
+
+     ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz
 
 GUI Configuration Backup
 =========
@@ -282,25 +287,19 @@ Upgrade Preparation Checklist
     .. code-block:: shell
 
       ACOS(config)#show memory | inc Memory
-
-      Verify minimum memory requriements, from first column:
-
-    .. code-block:: shell
-
       Memory:  8127392      4742619     3384773   58.30%
 
+      Verify minimum memory requriements, from first column:
   * Check the system boot order to determine new destination:
   
     .. code-block:: shell
+
       ACOS(config)#show bootimage | inc *
+      Hard Disk primary         5.2.1-p5.114 (*)
 
     This will display the current Default boot location
 
-    .. code-block:: shell
-
-      Hard Disk primary         5.2.1-p5.114 (*)
-
-  * Save all primary, secondary, and partition configurations
+   * Save all primary, secondary, and partition configurations
 
     .. code-block:: shell
 
