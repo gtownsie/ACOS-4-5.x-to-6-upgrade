@@ -430,6 +430,7 @@ CLI Configuration
 ---
 
 See the highlighted lines in the following example output along with the corresponding comments that are marked with “<--“characters: 
+
 ``
     ACOS(config)# restore use-mgmt-port scp://root@192.168.2.2/root/user1/backup1 
     Password []? 
@@ -438,12 +439,12 @@ See the highlighted lines in the following example output along with the corresp
     | Object         | Backup device                 | Current device 
     |----------------|-------------------------------|--------------------- 
     | Device         | TH1030                        | TH3030 
-    |Image version   | 4.1.1-P1                      | 4.1.1-P2 ``
+    |Image version   | 4.1.1-P1                      | 4.1.1-P2
 
     System memory: 
         Object               Backup device        Current device 
     ------------------------------------------------------------------- 
-        Memory (MB)          8174                 16384 ``
+        Memory (MB)          8174                 16384
 
     Checking memory: OK. 
 
@@ -451,10 +452,10 @@ See the highlighted lines in the following example output along with the corresp
         Object               Backup device        Current device 
     ------------------------------------------------------------------- 
         Total                10                    12 
-        1 Gig                1-10                  1-12`` 
+        1 Gig                1-10                  1-12 
 
     Do you want to skip port map?(Answer no if you want port mapping manually.) 
-    [yes/no]: no``
+    [yes/no]: no
     
     Please specify the Current device to Backup device port mapping 
     1-10 : a valid port number in backup device. 
