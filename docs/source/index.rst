@@ -46,7 +46,7 @@ Consider the following recommendations before upgrading the ACOS device:
 * Regardless of whether you have an ADC, CGN, or TPS, a single software image is used to upgrade your ACOS device. However, ensure that the correct product license is obtained and activated.  
 
 .. note::
- For TPS upgrade instructions, see TPS Upgrade Guide.
+   For TPS upgrade instructions, see TPS Upgrade Guide.
  
 * During the reboot, the system performs a full reset and will be offline. The actual duration may vary depending on the system parameters.  
 
@@ -54,14 +54,13 @@ Unsupported Hardware and Features
 *********
 
 .. warning:: 
-* The 3rd Generation Hardware Platforms cannot be upgraded to ACOS 6.x version. For more information, see Hardware Platforms Support.  
-* The Web Application Firewall (WAF) is no longer supported starting from the ACOS 6.x release. Hence, all WAF configurations will be removed after the upgrade. For more information, see Web Application Firewall Changes. 
+   * The 3rd Generation Hardware Platforms cannot be upgraded to ACOS 6.x version. For more information, see Hardware Platforms Support.  
+   * The Web Application Firewall (WAF) is no longer supported starting from the ACOS 6.x release. Hence, all WAF configurations will be removed after the upgrade. For more information, see Web Application Firewall Changes. 
 
 Prerequisites 
 *********
 
 This section outlines essential information that you should know before proceeding with the upgrade process.  
-
 
 Table 1 : Prerequisite Tasks 
 
@@ -87,8 +86,8 @@ Table 1 : Prerequisite Tasks
 
 
 .. note::
-  * Schedule a maintenance window for the upgrade, considering the potential downtime required. Communicate this schedule to relevant stakeholders. 
-  * Inform all users about the scheduled downtime and ensure they save any unsaved work or log out of the system before the upgrade begins. 
+   * Schedule a maintenance window for the upgrade, considering the potential downtime required. Communicate this schedule to relevant stakeholders. 
+   * Inform all users about the scheduled downtime and ensure they save any unsaved work or log out of the system before the upgrade begins. 
 
 Upgrade Requirements
 **********
@@ -97,8 +96,8 @@ System Requirement
 =========
 The system requirements for ACOS software include the following: 
 
-* For ACOS 6.x releases, the minimum disk space requirement is 8 GB.  
-* For vThunder and Thunder devices, the minimum memory requirement is 8 GB. 
+  * For ACOS 6.x releases, the minimum disk space requirement is 8 GB.  
+  * For vThunder and Thunder devices, the minimum memory requirement is 8 GB. 
 
 System Partitions
 =========
@@ -134,14 +133,15 @@ This section describes general guidelines on how ACOS selects the boot image.
 
 Each ACOS device contains multiple locations where software images can be placed. The "Upgrade Process" table provides an overview of the general upgrade process. 
 
-* When you load a new image onto the ACOS device, you can select the image device (disk or CF) and the area (primary or secondary) on the device.  
+  * When you load a new image onto the ACOS device, you can select the image device (disk or CF) and the area (primary or secondary) on the device.  
 
-* When you power ON or reboot the ACOS device, it always attempts to boot from the disk, using the image area specified in the configuration (primary disk, by default). If a disk fails, the device attempts to boot from the same image area on the backup disk (if applicable to the device model). 
+  * When you power ON or reboot the ACOS device, it always attempts to boot from the disk, using the image area specified in the configuration (primary disk, by default). If a disk fails, the device attempts to boot from the same image area on the backup disk (if applicable to the device model). 
 
 You need to change the boot order only when you plan to upload the new image into an image area other than the first image area the ACOS device uses when it boots (primary disk). To change the boot order, use the bootimage command.  
 
 .. note::
-A10 Networks recommends installing the new image into the inactive disk image area, either primary or secondary, while retaining the old image in the other area. This helps to restore the system in case a downgrade is necessary or if an issue occurs while rebooting the new image.  
+  A10 Networks recommends installing the new image into the inactive disk image area, either primary or secondary, while retaining the old image in the other area. This helps to 
+  restore the system in case a downgrade is necessary or if an issue occurs while rebooting the new image.  
 
 Upgrade Process
 =========
@@ -165,11 +165,11 @@ Download Software Image
 
 A10 Networks has two device types, FTA and non-FTA.  All vThunder devices will use the non-FTA version and depending on the hardware type will determin the correct image.  To determine if your device has an FTA, login to the device and run the following command:
 
-``ACOS# show hardware | inc FPGA``
+    ``ACOS# show hardware | inc FPGA``
 
 If a response is shown then the device had and FTA.
 
-``FPGA       : 4 instance(s) present``
+    ``FPGA       : 4 instance(s) present``
 
 if the device does not have an FTA, no response to the ``show hardware`` command is displayed
 
@@ -189,16 +189,16 @@ It's essential to perform a complete backup of your data, including configuratio
 This section provides examples of how to back up your system. 
 
 CLI Configuration Backup 
-===
+=========
 
 It is recommended to backup the system and the log files prior to upgrading the software.  
 * The following example creates a backup of the system (startup-config file, aFleX scripts, and SSL certificates and keys) on a remote server using SCP:
 
-``ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz``
+    ``ACOS(config)# backup system scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backupfile.tar.gz``
 
 * The following example creates a daily backup of the log entries in the syslog buffer. The connection to the remote server will be established using SCP on the management interface (use-mgmt-port).  
 
-``ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz``
+    ``ACOS(config)# backup log period 1 use-mgmt-port scp://exampleuser@192.168.3.3/home/users/exampleuser/backups/backuplog.tar.gz``
 
 GUI Configuration Backup
 =========
@@ -218,7 +218,7 @@ Upgrade Preparation Checklist
 
   * Verify platform compatability:
     
-    `ACOS(config)# show hardware | inc Gateway`
+      `ACOS(config)# show hardware | inc Gateway`
   
     Validate the platform is supported on version 6.x
     * vThunder:
@@ -229,26 +229,26 @@ Upgrade Preparation Checklist
       
   * Check the current software version
   
-    `ACOS\>show version | inc ACOS`
+      `ACOS\>show version | inc ACOS`
   
     Validate that the current version is 4.x or later.
   
-    `64-bit Advanced Core OS (ACOS) version 5.2.1-p5, build 114 (Jul-14-2022,05:11)`
+      `64-bit Advanced Core OS (ACOS) version 5.2.1-p5, build 114 (Jul-14-2022,05:11)`
   
   * Check the current system disk space and verify minimum disk requriements 
     
-    `ACOS(config)#show disk
-       Total(MB)    Used(MB)       Free(MB)       Usage
-       ---------------------------------------------------
-       20480          10421          10058          50%
-       Hard Disk Primary Status : OK`
+      `ACOS(config)#show disk
+         Total(MB)    Used(MB)       Free(MB)       Usage
+         ---------------------------------------------------
+         20480          10421          10058          50%
+         Hard Disk Primary Status : OK`
           
   * Check Memory: 
-    `ACOS(config)#show memory | inc Memory`
+      `ACOS(config)#show memory | inc Memory`
 
-    Verify minimum memory requriements, from first column:
+      Verify minimum memory requriements, from first column:
   
-    `Memory:  8127392      4742619     3384773   58.30%`
+      `Memory:  8127392      4742619     3384773   58.30%`
 
   * Check the system boot order to determine new destination:
   
