@@ -257,12 +257,13 @@ Upgrade Preparation Checklist
       ``64-bit Advanced Core OS (ACOS) version 5.2.1-p5, build 114 (Jul-14-2022,05:11)``
   
   * Check the current system disk space and verify minimum disk requriements 
-    
-      ``ACOS(config)#show disk
-         Total(MB)    Used(MB)       Free(MB)       Usage
-         ---------------------------------------------------
-         20480          10421          10058          50%
-         Hard Disk Primary Status : OK``
+    .. code-block:: shell
+
+       ACOS(config)#show disk
+       Total(MB)    Used(MB)       Free(MB)       Usage
+       ---------------------------------------------------
+       20480          10421          10058          50%
+       Hard Disk Primary Status : OK
           
   * Check Memory: 
       ``ACOS(config)#show memory | inc Memory``
