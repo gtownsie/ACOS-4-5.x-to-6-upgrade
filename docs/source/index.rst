@@ -241,7 +241,7 @@ GUI Configuration Backup
 
 1. Log in to ACOS Web GUI using your credentials. 
 
-1. Navigate to System >> Maintenance >> Backup.  
+2. Navigate to System >> Maintenance >> Backup.  
    >  == Add screenshot? 
 
 Pre-Upgrade Tasks 
@@ -348,7 +348,7 @@ CLI Configuration
 
 1. Complete Upgrade Preparation Checklist
 
-1. Upgrade the ACOS device to the inactve partition.  
+2. Upgrade the ACOS device to the inactve partition.  
 
   * If the primary hard disk is active upgrade the secondary hard disk: 
 
@@ -370,13 +370,13 @@ CLI Configuration
 
     Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist   
 
-2. You will be prompted to reboot your ACOS device
+3. You will be prompted to reboot your ACOS device
     
    ==Choose "NO"==
   
-3. You will be prompted to reboot your ACOS device. 
+4. You will be prompted to reboot your ACOS device. 
 
-4. Press yes to reboot and bring up the upgraded ACOS software.  
+5. Press yes to reboot and bring up the upgraded ACOS software.  
   
    .. note:: 
      Allow up to five minutes for the reboot to complete. (The typical reboot time is 2-3 minutes.) 
@@ -389,9 +389,9 @@ GUI Configuration
 
 1. Log in to ACOS Web GUI using your credentials. 
 
-1. Navigate to System >> Maintenance >> Upgrade.  
+2. Navigate to System >> Maintenance >> Upgrade.  
 
-1. On the Upgrade page, click ? to open the Online Help. 
+3. On the Upgrade page, click ? to open the Online Help. 
 
 The Online Help provides complete details on upgrade and rollback instructions.  
 
