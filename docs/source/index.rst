@@ -389,9 +389,9 @@ GUI Configuration
 
 1. Log in to ACOS Web GUI using your credentials. 
 
-2. Navigate to System >> Maintenance >> Upgrade.  
+1. Navigate to System >> Maintenance >> Upgrade.  
 
-3. On the Upgrade page, click ? to open the Online Help. 
+1. On the Upgrade page, click ? to open the Online Help. 
 
 The Online Help provides complete details on upgrade and rollback instructions.  
 
