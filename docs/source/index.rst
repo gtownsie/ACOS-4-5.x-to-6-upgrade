@@ -258,8 +258,9 @@ Upgrade Preparation Checklist
 
     ACOS(config)# show hardware | inc Gateway
   
-    Validate the platform is supported on version 6.x
-    * vThunder:
+  Validate the platform is supported on version 6.x
+
+  * vThunder:
 
   .. code-block:: shell
 
