@@ -193,17 +193,15 @@ A10 Networks has two device types, FTA and non-FTA.  All vThunder devices will u
 
 If a response is shown then the device had and FTA.
 
+.. code-block:: shell
 
-  .. code-block:: shell
-
-    FPGA       : 4 instance(s) present
+   FPGA       : 4 instance(s) present
 
 if the device does not have an FTA, no response to the ``show hardware`` command is displayed
 
 Log in to A10 Networks Support using the GLM credential and download the ACOS upgrade package as specified below:  
 
 * For FTA enabled platforms, use the image with the file name:
-
 
   .. code-block:: shell
  
@@ -296,6 +294,7 @@ Upgrade Preparation Checklist
        Hard Disk Primary Status : OK
           
   * Check Memory: 
+
     .. code-block:: shell
 
       ACOS(config)#show memory | inc Memory
