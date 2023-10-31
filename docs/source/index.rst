@@ -266,7 +266,7 @@ Upgrade Preparation Checklist
 
      Thunder Series Unified Application Service Gateway vThunder
         
-    * Hardware:
+  * Hardware:
 
    .. code-block:: shell
 
@@ -351,9 +351,11 @@ CLI Configuration
   * If the primary hard disk is active upgrade the secondary hard disk: 
 
    .. code-block:: shell
+
       ACOS-5-x(config)# upgrade hd sec scp://2.2.2.2/images/ACOS_<version>.upg
      
-   .. note::  
+   .. note::
+
       Use the approprate FTA or non-FTA ACOS version identified in the Upgrade Preparation Checklist
 
   * If the secondary hard disk is active upgrade the primary hard disk:
