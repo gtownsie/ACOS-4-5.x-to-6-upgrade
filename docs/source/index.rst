@@ -240,6 +240,7 @@ GUI Configuration Backup
 =========
 
 1. Log in to ACOS Web GUI using your credentials. 
+
 1. Navigate to System >> Maintenance >> Backup.  
    >  == Add screenshot? 
 
@@ -387,7 +388,9 @@ GUI Configuration
 =========
 
 1. Log in to ACOS Web GUI using your credentials. 
+
 1. Navigate to System >> Maintenance >> Upgrade.  
+
 1. On the Upgrade page, click ? to open the Online Help. 
 
 The Online Help provides complete details on upgrade and rollback instructions.  
